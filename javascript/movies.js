@@ -106,10 +106,11 @@ $(document).ready(function() {
 
         }
       }
+
   renderButtons();
 
       // function displayMovieInfo() {
-        
+
       //   console.log();
       //   var genreId = $(this).attr("genre-id");
 
@@ -197,5 +198,4 @@ $(document).ready(function() {
       
       // Adding a click event listener to all elements with a class of "movie"
       $(document).on("click", ".movie", displayMovieInfo);
-
-}):
+});
