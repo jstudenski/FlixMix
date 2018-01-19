@@ -3,7 +3,7 @@ $(document).ready(function() {
   // var genres = ["Comedy", "Family", "Action", "Horror", "Romance"]
 
   var genres = {
-     "genres": [ 
+    "genres": [ 
      {
         "emoji" : "images/moods/action.png",
         "id": 28,
@@ -94,7 +94,6 @@ $(document).ready(function() {
 
         // Looping through the array of movies
         for (var i = 0; i < genres.genres.length; i++) {
-          console.log(genres.genres[i]);
 
           var a = $("<img>");
           a.addClass("emoji-button");
@@ -109,71 +108,85 @@ $(document).ready(function() {
 
   renderButtons();
 
+  function getMovie(movieGenre) {
+
+  }
+
   $('.emoji-button').on('click', function(){
 
+        var movieGenre = $(this).attr("genre-id");
+        var drinksGenre = $(this).attr("genre-name").toLowerCase();
 
-        
-        console.log();
-        var genreId = $(this).attr("genre-id");
+        console.log(movieGenre, drinksGenre);
 
+        getDrink(drinksGenre);
+        console.log(drink.name, drink.genre);
 
-        console.log(genreId);
+        // getMovie(movieGenre);
+        // console.log();
+  });
 
-        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + genreId
+});
 
-        $.ajax({
-          url: queryURL,
-          method: "GET"
-        }).done(function(response) {
+    //     var genreId = $(this).attr("genre-id");
 
-          console.log(response.results);
+    //     console.log(genreId);
 
-          var theMovieDb = theMovieDb.genres.getMovies({"id": 28}, successCB, errorCB);
-          console.log(theMovieDb);
+    //     var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + genreId
 
-      //     // Creating a div to hold the movie
-      //     var movieDiv = $("<div class='movie'>");
+    //     $.ajax({
+    //       url: queryURL,
+    //       method: "GET"
+    //     }).done(function(response) {
 
-      //     // Storing the rating data
-      //     var results = response.results;
+    //       console.log(response.results);
 
-      //     // Creating an element to have the rating displayed
-      //     var pOne = $("<p>").text(response.results);
+    //       var theMovieDb = theMovieDb.genres.getMovies({"id": 28}, successCB, errorCB);
+    //       console.log(theMovieDb);
 
-      //     // Displaying the rating
-      //     movieDiv.append(pOne);
+    //   //     // Creating a div to hold the movie
+    //   //     var movieDiv = $("<div class='movie'>");
 
-      //     // Storing the release year
-      //     // var released = response.release_date;
+    //   //     // Storing the rating data
+    //   //     var results = response.results;
 
-      //     // // Creating an element to hold the release year
-      //     // var pTwo = $("<p>").text("Released: " + released);
+    //   //     // Creating an element to have the rating displayed
+    //   //     var pOne = $("<p>").text(response.results);
 
-      //     // // Displaying the release year
-      //     // movieDiv.append(pTwo);
+    //   //     // Displaying the rating
+    //   //     movieDiv.append(pOne);
 
-      //     // Storing the plot
-      //   //   var plot = response.Overview;
+    //   //     // Storing the release year
+    //   //     // var released = response.release_date;
 
-      //   //   // Creating an element to hold the plot
-      //   //   var pThree = $("<p>").text("Plot: " + plot);
+    //   //     // // Creating an element to hold the release year
+    //   //     // var pTwo = $("<p>").text("Released: " + released);
 
-      //   //   // Appending the plot
-      //   //   movieDiv.append(pThree);
+    //   //     // // Displaying the release year
+    //   //     // movieDiv.append(pTwo);
 
-      //   //   // Retrieving the URL for the image
-      //   //   var imgURL = response.backdrop_path;
+    //   //     // Storing the plot
+    //   //   //   var plot = response.Overview;
 
-      //   //   // Creating an element to hold the image
-      //   //   var image = $("<img>").attr("src", imgURL);
+    //   //   //   // Creating an element to hold the plot
+    //   //   //   var pThree = $("<p>").text("Plot: " + plot);
 
-      //   //   // Appending the image
-      //   //   movieDiv.append(image);
+    //   //   //   // Appending the plot
+    //   //   //   movieDiv.append(pThree);
 
-      //   //   // Putting the entire movie above the previous movies
-      //   //   $("#movies-view").prepend(movieDiv);
-        });
-    });
+    //   //   //   // Retrieving the URL for the image
+    //   //   //   var imgURL = response.backdrop_path;
+
+    //   //   //   // Creating an element to hold the image
+    //   //   //   var image = $("<img>").attr("src", imgURL);
+
+    //   //   //   // Appending the image
+    //   //   //   movieDiv.append(image);
+
+    //   //   //   // Putting the entire movie above the previous movies
+    //   //   //   $("#movies-view").prepend(movieDiv);
+    //     });
+    // });
 
       // console.log(genres.name.length);
 
@@ -199,6 +212,4 @@ $(document).ready(function() {
       
       // Adding a click event listener to all elements with a class of "movie"
 
-
-});
 
