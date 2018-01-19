@@ -164,6 +164,7 @@
           console.log(genres.genres[i]);
 
           var a = $("<button>");
+          var imageContainer = $('<button id="imageDiv">');
           a.addClass("movie");
           a.attr("genre-id", genres.genres[i].id);
           a.attr("genre-name", genres.genres[i].name);
@@ -175,11 +176,11 @@
 
         $(document).ready(function(){
           var imageContainer = $('<div id="imageDiv"></div>');
-          var image1 = $('<img src="images/moods/action.png"/>');
-          var image2 = $('<img src="images/moods/comedy.png"/>');
-          var image3 = $('<img src="images/moods/family.png"/>');
-          var image4 = $('<img src="images/moods/horror.png"/>');
-          var image5 = $('<img src="images/moods/romance.png"/>');
+          var image1 = $('<img class="emoji-button" src="images/moods/action.png"/>');
+          var image2 = $('<img class="emoji-button" src="images/moods/comedy.png"/>');
+          var image3 = $('<img class="emoji-button" src="images/moods/family.png"/>');
+          var image4 = $('<img class="emoji-button" src="images/moods/horror.png"/>');
+          var image5 = $('<img class="emoji-button" src="images/moods/romance.png"/>');
           imageContainer.append(image1);
           imageContainer.append(image2);
           imageContainer.append(image3);
