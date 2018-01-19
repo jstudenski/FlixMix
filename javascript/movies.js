@@ -188,31 +188,6 @@
           $('body').append(imageContainer);
           });
 
-        // $('<img />', {
-        //       src: 'images/moods/action.png',
-        //       width: '100px',
-        //       height: '100px'
-        //   }).appendTo($('#buttons-view').empty());
-        //   $('<img />', {
-        //       src: 'images/moods/comedy.png',
-        //       width: '100px',
-        //       height: '100px'
-        //   }).appendTo($('#buttons-view').empty());
-        //   $('<img />', {
-        //       src: 'images/moods/family.png',
-        //       width: '100px',
-        //       height: '100px'
-        //   }).appendTo($('#buttons-view').empty());
-        //   $('<img />', {
-        //       src: 'images/moods/horror.png',
-        //       width: '100px',
-        //       height: '100px'
-        //   }).appendTo($('#buttons-view').empty());
-        //   $('<img />', {
-        //       src: 'images/moods/romance.png',
-        //       width: '100px',
-        //       height: '100px'
-          // }).appendTo($('#buttons-view').empty());
       }
       
       // Adding a click event listener to all elements with a class of "movie"
