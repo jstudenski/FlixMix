@@ -109,24 +109,27 @@ $(document).ready(function() {
 
   renderButtons();
 
-      // function displayMovieInfo() {
+  $('.emoji-button').on('click', function(){
 
-      //   console.log();
-      //   var genreId = $(this).attr("genre-id");
 
-      //   console.log(genreId);
+        
+        console.log();
+        var genreId = $(this).attr("genre-id");
 
-      //   var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + genreId
 
-      //   $.ajax({
-      //     url: queryURL,
-      //     method: "GET"
-      //   }).done(function(response) {
+        console.log(genreId);
 
-      //     console.log(response.results);
+        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + genreId
 
-      //     var theMovieDb = theMovieDb.genres.getMovies({"id": 28}, successCB, errorCB);
-      //     console.log(theMovieDb);
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).done(function(response) {
+
+          console.log(response.results);
+
+          var theMovieDb = theMovieDb.genres.getMovies({"id": 28}, successCB, errorCB);
+          console.log(theMovieDb);
 
       //     // Creating a div to hold the movie
       //     var movieDiv = $("<div class='movie'>");
@@ -169,10 +172,8 @@ $(document).ready(function() {
 
       //   //   // Putting the entire movie above the previous movies
       //   //   $("#movies-view").prepend(movieDiv);
-      //   });
-
-      // };
-
+        });
+    });
 
       // console.log(genres.name.length);
 
@@ -197,5 +198,7 @@ $(document).ready(function() {
       //   }
       
       // Adding a click event listener to all elements with a class of "movie"
-      $(document).on("click", ".movie", displayMovieInfo);
+
+
 });
+
