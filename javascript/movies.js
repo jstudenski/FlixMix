@@ -1,4 +1,5 @@
-
+$(document).ready(function() {
+  console.log("hello!");
   // var genres = ["Comedy", "Family", "Action", "Horror", "Romance"]
 
   var genres = {
@@ -105,11 +106,10 @@
 
         }
       }
-
   renderButtons();
 
       // function displayMovieInfo() {
-
+        
       //   console.log();
       //   var genreId = $(this).attr("genre-id");
 
@@ -173,48 +173,29 @@
       // };
 
 
-      // // console.log(genres.name.length);
+      // console.log(genres.name.length);
 
-      // // Function for displaying movie data
-      // // function renderButtons() {
+      // Function for displaying movie data
+      // function renderButtons() {
 
-      // //   $("#buttons-view").empty();
+      //   $("#buttons-view").empty();
 
-      // //   // Looping through the array of movies
-      // //   for (var i = 0; i < genres.genres.length; i++) {
-      // //     console.log(genres.genres[i]);
+      //   // Looping through the array of movies
+      //   for (var i = 0; i < genres.genres.length; i++) {
+      //     console.log(genres.genres[i]);
 
-      // //     var a = $("<button>");
-      // //     var imageContainer = $('<button id="imageDiv">');
-      // //     a.addClass("movie");
-      // //     a.attr("genre-id", genres.genres[i].id);
-      // //     a.attr("genre-name", genres.genres[i].name);
-      // //     a.text(genres.genres[i].name);
+      //     var a = $("<button>");
+      //     var imageContainer = $('<button id="imageDiv">');
+      //     a.addClass("movie");
+      //     a.attr("genre-id", genres.genres[i].id);
+      //     a.attr("genre-name", genres.genres[i].name);
+      //     a.text(genres.genres[i].name);
 
-      // //     $("#buttons-view").append(a);
+      //     $("#buttons-view").append(a);
 
-      // //   }
-
-      //   $(document).ready(function(){
-      //     var imageContainer = $('<div id="imageDiv"></div>');
-      //     var image1 = $('<img class="emoji-button" src="images/moods/action.png"/>');
-      //     var image2 = $('<img class="emoji-button" src="images/moods/comedy.png"/>');
-      //     var image3 = $('<img class="emoji-button" src="images/moods/family.png"/>');
-      //     var image4 = $('<img class="emoji-button" src="images/moods/horror.png"/>');
-      //     var image5 = $('<img class="emoji-button" src="images/moods/romance.png"/>');
-      //     imageContainer.append(image1);
-      //     imageContainer.append(image2);
-      //     imageContainer.append(image3);
-      //     imageContainer.append(image4);
-      //     imageContainer.append(image5);
-      //     $('body').append(imageContainer);
-      //     });
-
-      // }
+      //   }
       
-      // // Adding a click event listener to all elements with a class of "movie"
-      // $(document).on("click", ".movie", displayMovieInfo);
+      // Adding a click event listener to all elements with a class of "movie"
+      $(document).on("click", ".movie", displayMovieInfo);
 
-      // // Calling the renderButtons function to display the intial buttons
-      // renderButtons();
-
+}):
