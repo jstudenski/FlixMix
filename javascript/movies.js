@@ -149,12 +149,12 @@ $(document).ready(function() {
 
           console.log("genre results: ", response.results[randomNumber].poster_path);
 
-        var posterURL = response.results[randomNumber].poster_path;
+        var posterURL = "http://image.tmdb.org/t/p/w185" + response.results[randomNumber].poster_path;
         var image = $("<img>").attr("src", posterURL);
 
         $('#movies-view').append('Title: ', response.results[randomNumber].title + '<br>');
-        $('#movies-view').append(image + '<br>'); 
-        $('#movies-view').append('Plot: ', response.results[randomNumber].overview + '<br>');          
+        image.appendTo('#movies-view');
+        $('#movies-view').append('<br>' + 'Plot: ', response.results[randomNumber].overview + '<br>');          
         $('#movies-view').append('Released Date: ', response.results[randomNumber].release_date + '<br>'); 
       });
     }
