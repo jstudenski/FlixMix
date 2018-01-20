@@ -6,6 +6,22 @@ h1 {
 	padding-bottom: .5em;
 }
 
+#buttons-view {
+	width: 21em;
+    height: 20em;
+    margin: auto;
+    overflow-y: scroll;
+}
+
 .emoji-button {
 	max-width: 6em;
+	margin:.5em;
+}
+
+.emoji-button:hover {
+	background-color: #f2f2f2;
+} 
+
+.emoji-button:active {
+	background-color: grey;
 }
