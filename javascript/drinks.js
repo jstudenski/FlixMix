@@ -1,22 +1,22 @@
 var drinks = [
   {
     "name": "Cosmopolitan",
-    "img": "",
+    "image_path": "cosmopolitan.jpg",
     "genre": ["romance", "comedy"]
   },
   {
     "name": "Black Velvet",
-    "img": "",
+    "image_path": "blackvelvet.jpg",
     "genre": ["horror"]
   },
   {
     "name": "Punch",
-    "img": "",
-    "genre": ["family"]
+    "image_path": "punch.jpg",
+    "genre": ["family", "comedy"]
   },
   {
     "name": "Whiskey",
-    "img": "",
+    "image_path": "whiskey.jpg",
     "genre": ["action", "comedy"]
   },
 ]
@@ -32,7 +32,8 @@ function getDrink(genre) {
   if (index === -1) {
     getDrink(genre); // start over
   } else {
-    drink = random; // drink found!
+    main.currentPairing.drink.name = random.name;
+    main.currentPairing.drink.image_path = random.image_path;
   }
 }
 
