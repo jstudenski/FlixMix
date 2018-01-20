@@ -116,14 +116,11 @@ $(document).ready(function() {
 
   renderButtons();
 
-var movieGenre;
-var drinksGenre;
-
   $('.emoji-button').on('click', function(){
 
-      movieGenre = $(this).attr("genre-id");
-      drinksGenre = $(this).attr("genre-name").toLowerCase();
-      displayMovieInfo();
+      var movieGenre = $(this).attr("genre-id");
+      var drinksGenre = $(this).attr("genre-name").toLowerCase();
+      displayMovieInfo(movieGenre);
 
       console.log(movieGenre, drinksGenre);
 
@@ -131,22 +128,18 @@ var drinksGenre;
       console.log(drink.name, drink.genre);
 
   });
-    //     var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + genreId
+    
 
-         // getMovie(movieGenre);
-        // console.log();
-  // });
-
-  function displayMovieInfo() {
+  function displayMovieInfo(genre) {
 
         var randomNumber = Math.floor(Math.random() * 20);
         console.log("testing random number: ", randomNumber); 
           // genres.genres[i].length)];
 
-        console.log("genreId: " + movieGenre);
+        console.log("genreId: " + genre);
         //console.log(displayMovieInfo);
 
-        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + movieGenre
+        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + genre
 
 
         $.ajax({
