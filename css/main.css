@@ -2,27 +2,17 @@ body {
 	background: url("../images/geometry.png") repeat;
 }
 
+.title {
+	margin:auto;
+}
 
 h1 {
 	text-align: center;
 	color: #000080;
 	padding-bottom: .2em;
-	margin-top: 2em;
-}
-
-.tOne {
+	margin-top: .8em;
 	font-family: 'Lakki Reddy', cursive;
-	font-size: 2em;
-}
-
-.tTwo {
-	font-family: 'Lakki Reddy', cursive;
-	font-size: 2em;
-}
-
-.tThree {
-	font-family: 'Lakki Reddy', cursive;
-	font-size: 2em;
+	font-size: 6em;
 }
 
 #buttons-view {
@@ -35,9 +25,13 @@ h1 {
     background-color: rgba(0, 0, 26, .1);
 }
 
+/* 
+this targets the default scrollbar (compulsory)
+
 ::-webkit-scrollbar {
       width: 15px;
-} /* this targets the default scrollbar (compulsory) */
+}
+*/
 
 .emoji-button {
 	max-width: 4.5em;
@@ -46,11 +40,11 @@ h1 {
 }
 
 .emoji-button:hover {
-	background-color: #e6e6ff;
+	background-color: #000080;
 } 
 
 .emoji-button:active {
-	background-color: #000080;
+	background-color: #e6e6ff;
 }
 
 
