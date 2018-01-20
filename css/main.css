@@ -2,47 +2,49 @@ body {
 	background: url("../images/geometry.png") repeat;
 }
 
+.title {
+	margin:auto;
+}
 
 h1 {
 	text-align: center;
-	color: #990000;
+	color: #000080;
 	padding-bottom: .2em;
-	margin-top: 2em;
-}
-
-.tOne {
+	margin-top: .8em;
 	font-family: 'Lakki Reddy', cursive;
-	font-size: 2em;
-}
-
-.tTwo {
-	font-family: 'Lakki Reddy', cursive;
-	font-size: 2em;
-}
-
-.tThree {
-	font-family: 'Lakki Reddy', cursive;
-	font-size: 2em;
+	font-size: 6em;
 }
 
 #buttons-view {
-	width: 16em;
+	width: 17em;
     height: 16em;
     margin: auto;
     overflow-y: scroll;
+    border-bottom: 2px solid #ccccff;
+    border-top: 2px solid #ccccff;
+    background-color: rgba(0, 0, 26, .1);
 }
+
+/* 
+this targets the default scrollbar (compulsory)
+
+::-webkit-scrollbar {
+      width: 15px;
+}
+*/
 
 .emoji-button {
 	max-width: 4.5em;
 	margin:.3em;
+	opacity:1;
 }
 
 .emoji-button:hover {
-	background-color: #f2f2f2;
+	background-color: #000080;
 } 
 
 .emoji-button:active {
-	background-color: grey;
+	background-color: #e6e6ff;
 }
 
 
