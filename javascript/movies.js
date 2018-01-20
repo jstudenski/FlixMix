@@ -147,7 +147,7 @@ $(document).ready(function() {
           method: "GET"
         }).done(function(response) {
 
-          console.log("genre results: ", response.results[randomNumber].title);
+          console.log("genre results: ", response.results[randomNumber].poster_path);
 
       });
     }
