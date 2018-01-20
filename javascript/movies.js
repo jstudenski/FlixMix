@@ -1,6 +1,6 @@
 $(document).ready(function() {
   console.log("hello!");
-  // var genres = ["Comedy", "Family", "Action", "Horror", "Romance"]
+  
 
   var genres = {
     "genres": [ 
@@ -8,6 +8,7 @@ $(document).ready(function() {
         "emoji" : "images/moods/action.png",
         "id": 28,
         "name": "action"
+
       },
       {
         "emoji" : "images/moods/adventure.png",
@@ -41,6 +42,7 @@ $(document).ready(function() {
         "emoji" : "images/moods/family.png",
         "id": 10751,
         "name": "family"
+
       },
       {
         "emoji" : "images/moods/fantasy.png",
@@ -113,16 +115,25 @@ $(document).ready(function() {
       }
 
   renderButtons();
+var movieGenre;
+var drinksGenre;
 
   $('.emoji-button').on('click', function(){
 
+
         var movieGenre = $(this).attr("genre-id");
         var drinksGenre = $(this).attr("genre-name").toLowerCase();
+
+        movieGenre = $(this).attr("genre-id");
+        drinksGenre = $(this).attr("genre-name").toLowerCase();
+        displayMovieInfo();
+
 
         console.log(movieGenre, drinksGenre);
 
         getDrink(drinksGenre);
         console.log(drink.name, drink.genre);
+
 
         // getMovie(movieGenre);
         // console.log();
@@ -131,6 +142,21 @@ $(document).ready(function() {
 });
     //     var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + genreId
 
+         // getMovie(movieGenre);
+        // console.log();
+  // });
+
+  function displayMovieInfo() {
+
+        //console.log();
+        //var genreId = $(this).attr("genre-id");
+
+        console.log("genreId: " + movieGenre);
+        //console.log(displayMovieInfo);
+
+        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + movieGenre
+
+
     //     $.ajax({
     //       url: queryURL,
     //       method: "GET"
@@ -138,8 +164,13 @@ $(document).ready(function() {
 
     //       console.log(response.results);
 
+
     //       var theMovieDb = theMovieDb.genres.getMovies({"id": 28}, successCB, errorCB);
     //       console.log(theMovieDb);
+
+          // var theMovieDb = theMovieDb.genres.getMovies({"id": 28}, successCB, errorCB);
+          // console.log(theMovieDb);
+
 
     //   //     // Creating a div to hold the movie
     //   //     var movieDiv = $("<div class='movie'>");
@@ -180,10 +211,17 @@ $(document).ready(function() {
     //   //   //   // Appending the image
     //   //   //   movieDiv.append(image);
 
+
     //   //   //   // Putting the entire movie above the previous movies
     //   //   //   $("#movies-view").prepend(movieDiv);
     //     });
     // });
+
+      //   //   // Putting the entire movie above the previous movies
+      //   //   $("#movies-view").prepend(movieDiv);
+        }
+    
+
 
       // console.log(genres.name.length);
 
