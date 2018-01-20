@@ -5,7 +5,7 @@ body {
 
 h1 {
 	text-align: center;
-	color: #990000;
+	color: #000080;
 	padding-bottom: .2em;
 	margin-top: 2em;
 }
@@ -26,23 +26,31 @@ h1 {
 }
 
 #buttons-view {
-	width: 16em;
+	width: 17em;
     height: 16em;
     margin: auto;
     overflow-y: scroll;
+    border-bottom: 2px solid #ccccff;
+    border-top: 2px solid #ccccff;
+    background-color: rgba(0, 0, 26, .1);
 }
+
+::-webkit-scrollbar {
+      width: 15px;
+} /* this targets the default scrollbar (compulsory) */
 
 .emoji-button {
 	max-width: 4.5em;
 	margin:.3em;
+	opacity:1;
 }
 
 .emoji-button:hover {
-	background-color: #f2f2f2;
+	background-color: #e6e6ff;
 } 
 
 .emoji-button:active {
-	background-color: grey;
+	background-color: #000080;
 }
 
 
