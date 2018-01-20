@@ -115,31 +115,22 @@ $(document).ready(function() {
       }
 
   renderButtons();
+
 var movieGenre;
 var drinksGenre;
 
   $('.emoji-button').on('click', function(){
 
+      movieGenre = $(this).attr("genre-id");
+      drinksGenre = $(this).attr("genre-name").toLowerCase();
+      displayMovieInfo();
 
-        var movieGenre = $(this).attr("genre-id");
-        var drinksGenre = $(this).attr("genre-name").toLowerCase();
+      console.log(movieGenre, drinksGenre);
 
-        movieGenre = $(this).attr("genre-id");
-        drinksGenre = $(this).attr("genre-name").toLowerCase();
-        displayMovieInfo();
+      getDrink(drinksGenre);
+      console.log(drink.name, drink.genre);
 
-
-        console.log(movieGenre, drinksGenre);
-
-        getDrink(drinksGenre);
-        console.log(drink.name, drink.genre);
-
-
-        // getMovie(movieGenre);
-        // console.log();
   });
-
-});
     //     var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + genreId
 
          // getMovie(movieGenre);
@@ -148,8 +139,9 @@ var drinksGenre;
 
   function displayMovieInfo() {
 
-        //console.log();
-        //var genreId = $(this).attr("genre-id");
+        var randomNumber = Math.floor(Math.random() * 20);
+        console.log("testing random number: ", randomNumber); 
+          // genres.genres[i].length)];
 
         console.log("genreId: " + movieGenre);
         //console.log(displayMovieInfo);
@@ -157,94 +149,16 @@ var drinksGenre;
         var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + movieGenre
 
 
-    //     $.ajax({
-    //       url: queryURL,
-    //       method: "GET"
-    //     }).done(function(response) {
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).done(function(response) {
 
-    //       console.log(response.results);
+          console.log("genre results: ", response.results[randomNumber].title);
 
-
-    //       var theMovieDb = theMovieDb.genres.getMovies({"id": 28}, successCB, errorCB);
-    //       console.log(theMovieDb);
-
-          // var theMovieDb = theMovieDb.genres.getMovies({"id": 28}, successCB, errorCB);
-          // console.log(theMovieDb);
-
-
-    //   //     // Creating a div to hold the movie
-    //   //     var movieDiv = $("<div class='movie'>");
-
-    //   //     // Storing the rating data
-    //   //     var results = response.results;
-
-    //   //     // Creating an element to have the rating displayed
-    //   //     var pOne = $("<p>").text(response.results);
-
-    //   //     // Displaying the rating
-    //   //     movieDiv.append(pOne);
-
-    //   //     // Storing the release year
-    //   //     // var released = response.release_date;
-
-    //   //     // // Creating an element to hold the release year
-    //   //     // var pTwo = $("<p>").text("Released: " + released);
-
-    //   //     // // Displaying the release year
-    //   //     // movieDiv.append(pTwo);
-
-    //   //     // Storing the plot
-    //   //   //   var plot = response.Overview;
-
-    //   //   //   // Creating an element to hold the plot
-    //   //   //   var pThree = $("<p>").text("Plot: " + plot);
-
-    //   //   //   // Appending the plot
-    //   //   //   movieDiv.append(pThree);
-
-    //   //   //   // Retrieving the URL for the image
-    //   //   //   var imgURL = response.backdrop_path;
-
-    //   //   //   // Creating an element to hold the image
-    //   //   //   var image = $("<img>").attr("src", imgURL);
-
-    //   //   //   // Appending the image
-    //   //   //   movieDiv.append(image);
-
-
-    //   //   //   // Putting the entire movie above the previous movies
-    //   //   //   $("#movies-view").prepend(movieDiv);
-    //     });
-    // });
-
-      //   //   // Putting the entire movie above the previous movies
-      //   //   $("#movies-view").prepend(movieDiv);
-        }
+      });
+    }
+});
     
-
-
-      // console.log(genres.name.length);
-
-      // Function for displaying movie data
-      // function renderButtons() {
-
-      //   $("#buttons-view").empty();
-
-      //   // Looping through the array of movies
-      //   for (var i = 0; i < genres.genres.length; i++) {
-      //     console.log(genres.genres[i]);
-
-      //     var a = $("<button>");
-      //     var imageContainer = $('<button id="imageDiv">');
-      //     a.addClass("movie");
-      //     a.attr("genre-id", genres.genres[i].id);
-      //     a.attr("genre-name", genres.genres[i].name);
-      //     a.text(genres.genres[i].name);
-
-      //     $("#buttons-view").append(a);
-
-      //   }
-      
-      // Adding a click event listener to all elements with a class of "movie"
 
 
