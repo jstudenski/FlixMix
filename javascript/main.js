@@ -20,6 +20,44 @@ var main = {
     }
 }
 
+
+
+ function renderButtons() {
+
+        $("#buttons-view").empty();
+
+        // Looping through the array of movies
+        for (var i = 0; i < genres.genres.length; i++) {
+
+          var a = $("<img>");
+          a.addClass("emoji-button");
+          a.attr("genre-id", genres.genres[i].id);
+          a.attr("genre-name", genres.genres[i].name);
+          a.attr("src", genres.genres[i].emoji);
+
+          $("#buttons-view").append(a);
+
+        }
+      }
+
+  renderButtons();
+
+  $('.emoji-button').on('click', function(){
+
+      var movieGenre = $(this).attr("genre-id");
+      var drinksGenre = $(this).attr("genre-name").toLowerCase();
+      displayMovieInfo(movieGenre);
+
+      console.log(movieGenre, drinksGenre);
+
+      getDrink(drinksGenre);
+      console.log(drink.name, drink.genre);
+
+  });
+
+
+  
+
 main.genreChoice = "comedy";
 
 console.log(main);
