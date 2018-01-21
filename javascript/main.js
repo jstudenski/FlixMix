@@ -20,7 +20,6 @@ var main = {
     }
 }
 
-
 main.genreChoice = "comedy";
 
 console.log(main);
@@ -36,3 +35,19 @@ console.log(main.currentPairing.drink.name);
 getDrink("comedy");
 
 console.log(main.currentPairing.drink.name);
+
+$(".new-drink").click(function() {
+  console.log("new-drink Clicked!");
+});
+
+$(".new-movie").click(function() {
+  console.log("new-movie Clicked!");
+});
+
+$(".new-pairing").click(function() {
+  console.log("new-pairing Clicked!");
+});
+
+$(".save-pairing").click(function() {
+  console.log("save-pairing Clicked!");
+});
