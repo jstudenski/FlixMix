@@ -92,7 +92,6 @@ var genres = {
   ]
 }
 
-
 function getMovie(genreID) {
   var randomNumber = Math.floor(Math.random() * 20);
   //console.log("testing random number: ", randomNumber); 
