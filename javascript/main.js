@@ -84,4 +84,4 @@ $(".save-pairing").click(function() {
   // get a new drink / movie
   getDrink(main.genreChoice);
   getMovie(main.genreID);
-}
+});
