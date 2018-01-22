@@ -255,6 +255,7 @@ function getDrink(genre) {
   } else {
     main.currentPairing.drink.name = random.name;
     main.currentPairing.drink.image_path = random.image_path;
+    main.currentPairing.drink.url = random.url; 
     // adds drink to the page
     renderDrink();
   }
@@ -270,11 +271,11 @@ function renderDrink(){
   image.css("width", "185px");
   image.appendTo('.drinks-view');
 
-  a = $("a")
-  a.prop("href", "http://www.goolge.com");
+  a = $("<a>")
+  a.prop("href", main.currentPairing.drink.url);
   a.attr('target','_blank');
   a.text("link");
-
+  a.appendTo('.drinks-view');
 }
 
 

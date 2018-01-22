@@ -9,7 +9,8 @@ var main = {
         "release_date":""
       },"drink": {
         "name":"",
-        "image_path":""
+        "image_path":"",
+        "url":""
       }
     },
   "savedPairings":[]
