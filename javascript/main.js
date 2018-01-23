@@ -41,56 +41,38 @@ function renderButtons() {
 function generateTable() {
   // clear table
   $('tbody').empty();
+  var drink;
+
   // go through saved movies and create table rows
   $.each(main.savedPairings, function( index, value ) {
+
+    var moviePoster = $("<img>")
+      .attr("src", main.savedPairings[index].movie.poster_path)
+      .css("width", "100px");
+
+    var drinkImg = $('<img>')
+      .attr("src", 'images/drinks/drinks_' +main.savedPairings[index].drink.image_path + '.png')
+      .css("width", "100px");
+
     var $tr = $('<tr>').append(
       $('<td>').text(main.savedPairings[index].genre),
-      $('<td>').text(main.savedPairings[index].drink.name),
       $('<td>').text(main.savedPairings[index].movie.title),
-      // $('<td>').text(snapshot.val().starttime).addClass('starttime'),
-      // $('<td>').text(snapshot.val().frequency).addClass('frequency'),
-      // $('<td>').addClass('arrival'),
-      // $('<td>').addClass('min-away'),
-      // $('<td>').append(btn) 
+      $('<td>').html(moviePoster),
+      $('<td>').html(drinkImg),
+      $('<td>').text(main.savedPairings[index].drink.name),
     ).appendTo('.table');
 
-
-    //alert( index + ": " + value );
   });
-
-
-  // generate table
-  // var $tr = $('<tr>').append(
-  //   $('<td>').text(hello),
-  //   // $('<td>').text(snapshot.val().destination).addClass('destination'),
-  //   // $('<td>').text(snapshot.val().starttime).addClass('starttime'),
-  //   // $('<td>').text(snapshot.val().frequency).addClass('frequency'),
-  //   // $('<td>').addClass('arrival'),
-  //   // $('<td>').addClass('min-away'),
-  //   // $('<td>').append(btn) 
-  // ).appendTo('.table');
-
 }
-
-
-
-generateTable();
-
-
-
-$(".title").hide();
-
-
-
-
-
-
-
 
 
 
 // on startup create our emoji buttons
 renderButtons();
+generateTable();
+
+
+
 
 // when you click an emoji
 $('.emoji-button').on('click', function(){
