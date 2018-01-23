@@ -262,19 +262,18 @@ function getDrink(genre) {
 function renderDrink(){
   // clear drink on our page now
   $('.drinks-view').html('');
+  // drink name
   $('.drinks-view').append('Name: ' + main.currentPairing.drink.name + '<br>');
-
+  // drink image
   var image = $("<img>").attr("src", 'images/drinks/drinks_' +main.currentPairing.drink.image_path + '.png');
   image.css("width", "185px");
   image.appendTo('.drinks-view');
-
+  // drink link
   a = $("<a>")
   a.prop("href", main.currentPairing.drink.url);
   a.attr('target','_blank');
-  // font awesome icon
-  i = $("<i>")
-  i.addClass("fas fa-link"); 
-
+  a.addClass("btn btn-info"); // bootstrap button classes
+  i = $("<i>").addClass("fas fa-link"); // font awesome icon
   a.html(i);
   a.appendTo('.drinks-view');
 }
