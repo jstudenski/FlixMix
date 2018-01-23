@@ -1,3 +1,17 @@
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDoXwhJFk8ZKIL8GbP0ZLb09GjohV0KwTM",
+    authDomain: "movie-drink-pairing.firebaseapp.com",
+    databaseURL: "https://movie-drink-pairing.firebaseio.com",
+    projectId: "movie-drink-pairing",
+    storageBucket: "",
+    messagingSenderId: "480029459361"
+  };
+
+  firebase.initializeApp(config);
+
+var database = firebase.database();
+
 var main = {
   "genreChoice":"",
   "genreID":"", 
@@ -135,6 +149,14 @@ $(".save-pairing").click(function() {
   // get a new drink / movie
   getDrink(main.genreChoice);
   getMovie(main.genreID);
+
+  var newSavedPair = database.ref().push({
+    });
+
+    newSavedPair.set({
+      savedPairings: main.savedPairings
+    });
+  
 });
 
 
