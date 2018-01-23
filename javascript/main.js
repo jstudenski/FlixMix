@@ -22,6 +22,7 @@ var savedPairings = [];
 
 // renders our emoji buttons
 function renderButtons() {
+  console.log(main);
   // clear buttons area
   $("#buttons-view").empty();
   // Looping through the array of genres (in movies.js)
@@ -36,29 +37,48 @@ function renderButtons() {
   }
 }
 
+// go through savedPairings and generate table
 function generateTable() {
-  // generate table
-  var $tr = $('<tr>').append(
-    $('<td>').text("hello"),
-    // $('<td>').text(snapshot.val().destination).addClass('destination'),
-    // $('<td>').text(snapshot.val().starttime).addClass('starttime'),
-    // $('<td>').text(snapshot.val().frequency).addClass('frequency'),
-    // $('<td>').addClass('arrival'),
-    // $('<td>').addClass('min-away'),
-    // $('<td>').append(btn) 
-  ).appendTo('.table');
+  // clear table
+  $('tbody').empty();
+  // go through saved movies and create table rows
+  $.each(main.savedPairings, function( index, value ) {
+    var $tr = $('<tr>').append(
+      $('<td>').text(main.savedPairings[index].genre),
+      $('<td>').text(main.savedPairings[index].drink.name),
+      $('<td>').text(main.savedPairings[index].movie.title),
+      // $('<td>').text(snapshot.val().starttime).addClass('starttime'),
+      // $('<td>').text(snapshot.val().frequency).addClass('frequency'),
+      // $('<td>').addClass('arrival'),
+      // $('<td>').addClass('min-away'),
+      // $('<td>').append(btn) 
+    ).appendTo('.table');
 
+
+    //alert( index + ": " + value );
+  });
+
+
+  // generate table
+  // var $tr = $('<tr>').append(
+  //   $('<td>').text(hello),
+  //   // $('<td>').text(snapshot.val().destination).addClass('destination'),
+  //   // $('<td>').text(snapshot.val().starttime).addClass('starttime'),
+  //   // $('<td>').text(snapshot.val().frequency).addClass('frequency'),
+  //   // $('<td>').addClass('arrival'),
+  //   // $('<td>').addClass('min-away'),
+  //   // $('<td>').append(btn) 
+  // ).appendTo('.table');
 
 }
 
 
 
+generateTable();
 
 
 
 $(".title").hide();
-
-
 
 
 
@@ -106,6 +126,7 @@ $(".save-pairing").click(function() {
   current = main.currentPairing;
   // make empty objects and fill them with the current values
   var save ={"movie": {}, "drink":{}};
+  save.genre = main.genreChoice;
   save.movie.title=current.movie.title;
   save.movie.poster_path=current.movie.poster_path;
   save.movie.overview=current.movie.overview;
@@ -114,7 +135,8 @@ $(".save-pairing").click(function() {
   save.drink.image_path=current.drink.image_path; 
   // push the object to our savedPairings array
   main.savedPairings.push(save);
-
+  // go through savedPairings and generate table
+  generateTable();
   // get a new drink / movie
   getDrink(main.genreChoice);
   getMovie(main.genreID);

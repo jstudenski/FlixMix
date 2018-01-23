@@ -243,9 +243,6 @@ var drinks = [
 var drink = {};
 // get random drink
 function getDrink(genre) {
-
-  console.log(main);
-  console.log(genre);
   // find random drink from array
   var random = drinks[Math.floor(Math.random()*drinks.length)];
   // see if the genre matches
