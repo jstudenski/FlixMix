@@ -57,7 +57,10 @@ function generateTable() {
     trash = $("<i>").addClass("far fa-trash-alt"); // font awesome icon
     var remove = $('<button>')
       .addClass('btn btn-danger')
-      .html(trash);
+      .html(trash)      
+      .attr('object-index', index) // use to find which item to remove from our object
+      .click(removeItem);
+
 
     var $tr = $('<tr>').append(
       $('<td>').text(main.savedPairings[index].genre),
@@ -71,7 +74,11 @@ function generateTable() {
   });
 }
 
-
+function removeItem (){
+  // slice the item from our main object using it's index
+  main.savedPairings.splice($(this).attr('object-index'),1);
+  generateTable();
+}
 
 // on startup create our emoji buttons
 renderButtons();
