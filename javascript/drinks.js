@@ -271,7 +271,11 @@ function renderDrink(){
   a = $("<a>")
   a.prop("href", main.currentPairing.drink.url);
   a.attr('target','_blank');
-  a.text("link");
+  // font awesome icon
+  i = $("<i>")
+  i.addClass("fas fa-link"); 
+
+  a.html(i);
   a.appendTo('.drinks-view');
 }
 
