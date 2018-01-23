@@ -36,6 +36,39 @@ function renderButtons() {
   }
 }
 
+function generateTable() {
+  // generate table
+  var $tr = $('<tr>').append(
+    $('<td>').text("hello"),
+    // $('<td>').text(snapshot.val().destination).addClass('destination'),
+    // $('<td>').text(snapshot.val().starttime).addClass('starttime'),
+    // $('<td>').text(snapshot.val().frequency).addClass('frequency'),
+    // $('<td>').addClass('arrival'),
+    // $('<td>').addClass('min-away'),
+    // $('<td>').append(btn) 
+  ).appendTo('.table');
+
+
+}
+
+
+
+
+
+
+$(".title").hide();
+
+
+
+
+
+
+
+
+
+
+
+
 // on startup create our emoji buttons
 renderButtons();
 
@@ -86,3 +119,18 @@ $(".save-pairing").click(function() {
   getDrink(main.genreChoice);
   getMovie(main.genreID);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
