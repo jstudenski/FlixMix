@@ -51,8 +51,13 @@ function generateTable() {
       .css("width", "100px");
 
     var drinkImg = $('<img>')
-      .attr("src", 'images/drinks/drinks_' +main.savedPairings[index].drink.image_path + '.png')
+      .attr("src", 'images/drinks/drinks_' + main.savedPairings[index].drink.image_path + '.png')
       .css("width", "100px");
+
+    trash = $("<i>").addClass("far fa-trash-alt"); // font awesome icon
+    var remove = $('<button>')
+      .addClass('btn btn-danger')
+      .html(trash);
 
     var $tr = $('<tr>').append(
       $('<td>').text(main.savedPairings[index].genre),
@@ -60,6 +65,7 @@ function generateTable() {
       $('<td>').html(moviePoster),
       $('<td>').html(drinkImg),
       $('<td>').text(main.savedPairings[index].drink.name),
+      $('<td>').html(remove),
     ).appendTo('.table');
 
   });

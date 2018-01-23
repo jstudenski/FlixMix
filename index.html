@@ -8,6 +8,9 @@
 	<!-- CSS Reset File -->
 	<link rel="stylesheet" href="css/reset.css">
 
+  <!-- Font Awesome -->
+  <script defer src="javascript/fontawesome-all.js"></script>
+
 	<!-- Linking Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -27,10 +30,15 @@
 
 </head>
 <body>
-  <div class="new-drink">new drink</div>
-  <div class="new-movie">new movie</div>
+  
+  <div class="new-drink">new <i class="fas fa-glass-martini"></i></div>
+  <div class="new-movie">new <i class="fas fa-film"></i></div>
   <div class="new-pairing">new pairing</div>
-  <div class="save-pairing">save pairing</div>
+  <div class="save-pairing"> </div>
+
+  <button type="button" class="btn btn-success save-pairing"><i class="fas fa-save"></i> Save</button>
+
+
 
 	<div class="container">
 		
@@ -81,6 +89,7 @@
             <th>Poster</th>
             <th>Image</th>
             <th>Drink</th>
+            <th><i class="far fa-trash-alt"></i></th>
           </tr>
         </thead>
         <tbody>
