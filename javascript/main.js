@@ -154,7 +154,8 @@ $(".save-pairing").click(function() {
     });
 
     newSavedPair.set({
-      savedPairings: main.savedPairings
+      savedPairings: main.savedPairings,
+      dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
   
 });
