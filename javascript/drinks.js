@@ -271,11 +271,5 @@ function renderDrink(){
   image.css("width", "185px");
   image.appendTo('.drinks-view');
   // drink link
-  a = $("<a>")
-  a.prop("href", main.currentPairing.drink.url);
-  a.attr('target','_blank');
-  a.addClass("btn btn-info"); // bootstrap button classes
-  i = $("<i>").addClass("fas fa-link"); // font awesome icon
-  a.html(i);
-  a.appendTo('.drinks-view');
+  $(".link-button").attr("href", main.currentPairing.drink.url);
 }

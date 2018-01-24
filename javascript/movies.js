@@ -130,8 +130,8 @@ function renderMovie(){
   image.appendTo('.movies-view');
   image.css("center");
 
-  $('.movies-view').append('<br>' + 'Plot: ', currentMovie.overview + '<br>');   
-  $('.movies-view').append('Released Date: ', currentMovie.release_date + '<br>'); 
+  $('.modal-body').html('');
+  $('.modal-body').append(currentMovie.overview); 
 }
 
 

@@ -5,24 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Movie-Drink-Pairing</title>
 
-	<!-- CSS Reset File -->
-	<!-- <link rel="stylesheet" href="css/reset.css"> -->
-
-  <!-- Font Awesome -->
-  <script defer src="javascript/fontawesome-all.js"></script>
-
-	<!-- Linking Bootstrap -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+	<!-- Bootstrap css 4.0.0 -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-	
-	<!-- jQuery 3.2.1 minified -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  	<!-- Font Awesome -->
+ 	 <script defer src="javascript/fontawesome-all.js"></script>
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Ranchers|Coiny|Diplomata|Geostar|Kumar+One|Lakki+Reddy|Modak|Jolly+Lodger|Caveat|Courgette|Great+Vibes|News+Cycle|Tangerin" rel="stylesheet">
@@ -46,21 +33,16 @@
 </head>
 
 <body>
-	<div class="row"></div>
-	<br>
-	<div class="row">
-		<div class="col-md-1"></div>
-		<!-- Jumbotron -->
-		<header class="col-md-10">
-			<div class="jumbotron">
-				<div class="container text-center">			
-					<h1 class="text-center animated fadeInDown">Net-Mix &nbsp;'N&nbsp; Chill</h1>
-					<h3 id="tag-line1">Movie + Drink Pairings to Suit Your Mood</h3>
-				</div>
-		    </div>
-		</header>
-		<div class="col-md-1"></div>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+	<div class="container text-center">			
+		<h1 class="text-center animated fadeInDown">Net-Mix &nbsp;'N&nbsp; Chill</h1>
+		<h3 id="tag-line1">Movie + Drink Pairings to Suit Your Mood</h3>
 	</div>
+</div>
+
+<div class="container-fluid">
 
 	<div class="container">    
     	<div class="row emoji-row">
@@ -71,20 +53,6 @@
 	    <br><br>
 		
 		<div class="row drink-movie-row">
-		    
-		    <!-- Drinks will Get Dumped Dere -->
-			<div class="col-md-6">
-				<div class="card content-card">
-					<h4 class="card-header text-center drink-title">Drink Selection</h4>
-					<div class="card-body mx-auto">
-						<div class="drinks-view mx-auto"><img src= "images/Drinks_small.jpg"></div>
-		    			<p class="card-text"></p>
-		    		</div>
-		    		<div class="card-footer">
-						<div class="new-drink btn btn-primary">new <i class="fas fa-glass-martini"></i></div>
- 					</div>
-		    	</div>
-		    </div>
 
 		    <!-- Movies will Get Dumped Dere -->
 		    <div class="col-md-6">
@@ -95,7 +63,43 @@
 		    			<p class="card-text"></p>
 		    		</div>
 		    		<div class="card-footer">
-						<div class="new-movie btn btn-primary">new <i class="fas fa-film"></i></div>
+						<div class="new-movie btn btn-primary content-button">new <i class="fas fa-film"></i></div>
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-info content-button" data-toggle="modal" data-target="#exampleModal">
+						  Plot
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title">Plot</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        
+						      </div>
+						    </div>
+						  </div>
+						</div>
+ 					</div>
+		    	</div>
+		    </div>
+
+		    <!-- Drinks will Get Dumped Dere -->
+			<div class="col-md-6">
+				<div class="card content-card">
+					<h4 class="card-header text-center drink-title">Drink Selection</h4>
+					<div class="card-body mx-auto">
+						<div class="drinks-view mx-auto"><img src= "images/Drinks_small.jpg"></div>
+		    			<p class="card-text"></p>
+		    		</div>
+		    		<div class="card-footer drinks-footer">
+						<div class="new-drink btn btn-primary content-button">new <i class="fas fa-glass-martini"></i></div>
+						<a class="btn btn-info link-button content-button" target="_blank">Recipe</a>
  					</div>
 		    	</div>
 		    </div>
@@ -104,9 +108,9 @@
 	</div>
 
 		<br>
-
+	<!-- This is where the buttons for save and new pairing are -->
 		<div class="row choices-row">
-			<div class="col-md-12">
+			<div class="col-md-10 col-centered">
 				<!-- New Pairing Button -->
 				<div class="btn btn-success new-pairing">new pairing</div>
 				<div class="btn btn-success save-pairing"><i class="fas fa-save"></i> Save</div>
@@ -137,13 +141,22 @@
 		</div><!-- table-row -->
 
 	<br>
-
-	<footer class="col-lg-12">
-		<div class="text-center">
-  			<p>2018 EvrClr, Inc.</p>
-  		</div>
-	</footer>
+</div>
+<footer>
+	<div class="text-center">
+		<p>2018 EvrClr, Inc.</p>
+		</div>
+</footer>
 	
+	<!-- jQuery 3.2.1 -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+	<!-- popper.js 1.12.9 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+	<!-- bootstrap.js 4.0.0-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 	<!-- Our js files -->
 	<script type="text/javascript" src="javascript/movies.js"></script>
 	<script type="text/javascript" src="javascript/drinks.js"></script>
