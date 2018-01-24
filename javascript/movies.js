@@ -133,5 +133,10 @@ function renderMovie(){
   $('.movies-view').append('Released Date: ', currentMovie.release_date + '<br>'); 
 }
 
+$('.movies-view').append('<h3>'+ response.results[randomNumber].title + '</h3>');
+image.appendTo('.movies-view');
+$('.movies-view').append('<br>' + 'Plot: ', response.results[randomNumber].overview + '<br>');          
+$('.movies-view').append('Released Date: ', response.results[randomNumber].release_date + '<br>'); 
+
 
 

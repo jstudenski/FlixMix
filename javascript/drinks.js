@@ -256,7 +256,9 @@ function getDrink(genre) {
     // adds drink to the page
     renderDrink();
   }
+  $("#Drink-Name").text(random.name);
 }
+
 
 // takes main.currentPairing.drink and renders it on our page
 function renderDrink(){
@@ -279,3 +281,4 @@ function renderDrink(){
 }
 
 
+// getDrink("comedy");

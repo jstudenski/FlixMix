@@ -6,7 +6,7 @@
 	<title>Movie-Drink-Pairing</title>
 
 	<!-- CSS Reset File -->
-	<link rel="stylesheet" href="css/reset.css">
+	<!-- <link rel="stylesheet" href="css/reset.css"> -->
 
   <!-- Font Awesome -->
   <script defer src="javascript/fontawesome-all.js"></script>
@@ -14,8 +14,16 @@
 	<!-- Linking Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+	<!-- jQuery 3.2.1 minified -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Ranchers|Coiny|Diplomata|Geostar|Kumar+One|Lakki+Reddy|Modak|Jolly+Lodger" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ranchers|Coiny|Diplomata|Geostar|Kumar+One|Lakki+Reddy|Modak|Jolly+Lodger|Caveat|Courgette|Great+Vibes|News+Cycle|Tangerin" rel="stylesheet">
+
+	 <link rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 	<!-- Favicon Link -->
 	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -32,28 +40,39 @@
 	<link rel="stylesheet" href="css/main.css">
 
 </head>
+
 <body>
   
-  <div class="new-drink">new <i class="fas fa-glass-martini"></i></div>
+  <!-- <div class="new-drink">new <i class="fas fa-glass-martini"></i></div>
   <div class="new-movie">new <i class="fas fa-film"></i></div>
   <div class="new-pairing">new pairing</div>
   <div class="save-pairing"> </div>
 
-  <button type="button" class="btn btn-success save-pairing"><i class="fas fa-save"></i> Save</button>
+  <button type="button" class="btn btn-success save-pairing"><i class="fas fa-save"></i> Save</button> -->
 
 
 
-	<div class="container">
+	<!-- <div class="container">
 		
 		<div class="row title-row">
 			<div class="title">
 		    	<h1>
 		    		Net-Mix&nbsp;&nbsp;&nbsp;n'&nbsp;&nbsp;&nbsp;Chill
 		    	</h1>
-	    	</div>
-    	</div>
+	    	</div> -->
+    	<!-- </div> -->
 
+	<!-- Jumbotron -->
+	<div class="jumbotron jumbotron-fluid mx-auto">
+		<div class="container text-center">			
+			<h1 class="text-center animated fadeInDown">Net-Mix &nbsp;'N&nbsp; Chill</h1>
+			<h3 id="tag-line1">Movie + Drink Pairings to Suit Your Mood</h3>
+		</div>
+    </div>
+
+	<div class="container">    
     	<div class="row emoji-row">
+    		<!-- <h3 id="tag-line2">What Are You Feeling Tonight?</h3> -->
 
 		    <!-- Rendered Buttons will get Dumped Here  -->
 		    <div id="buttons-view"></div>
@@ -62,56 +81,90 @@
 	    <br><br>
 		
 		<div class="row drink-movie-row">
+		    
+		    <!-- Drinks will Get Dumped Dere -->
+			<div class="col-md-6">
+				<div class="card">
+					<h4 class="card-header text-center">Drink Selection</h4>
+						<div class="card-body mx-auto">
+							<div class="drinks-view mx-auto"><h3 id="Drink-Name"></h3> <img src= "images/Drinks_small.jpg" style="width: 185px;"></div>
+		    				<p class="card-text">Some info about the chosen drink goes here</p>
+		    				 <a href="#" class="btn btn-primary new-drink">Try A Different Drink</a>
+		    		</div>
+		    	</div>
+		    </div>
+
 		    <!-- Movies will Get Dumped Dere -->
-		    <div class="col-md-6 movies-view"></div>
+		    <div class="col-md-6">
+		    	<div class="card">
+		    		<h4 class="card-header text-center">Movie Selection</h4>
+		    		<div class="card-body mx-auto">
+		    			<div class="movies-view mx-auto"><h3 id="Movies-Name"></h3><img src= "images/Movies_small.jpg" style="width: 185px;"></div>
+		    				<p class="card-text">The movie plot info will go here</p>
+		    				 <a href="#" class="btn btn-primary new-movie">Try A Different Movie</a>
+		    		</div>
+		    	</div>
+		    </div>
 
-			<!-- Drinks will Get Dumped Dere -->
-		    <div class="col-md-6 drinks-view"></div>
 		</div>
 
-		<div class="row refresh-row">
-			<div class="refresh-button">
-				
+		<br>
+
+		<div class="row choices-row">
+			<div class="card col-md-6">
+				<!-- New Pairing Button -->
+				<!-- <div class="col-md-6"> -->
+					<a href="#" class="btn btn-primary new-pairing">I Want A New Pairing</a>				
+				<!-- </div> -->
+			</div>
+
+			<div class="col-md-6">
+				<!-- Save Current Pairing Button -->
+				<div class="col-md-6">
+					<a href="#" class="btn btn-primary save-pairing">I Want To Save This Pairing</a>
+				</div>
 			</div>
 		</div>
 
-		<div class="row save-row">
-			<div class="save-button">
-				
-			</div>
-		</div>
-
+		<br>
 
 		<div class="row table-row">
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Genre</th>
-            <th>Movie</th>
-            <th>Poster</th>
-            <th>Image</th>
-            <th>Drink</th>
-            <th><i class="far fa-trash-alt"></i></th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+	      	<table class="table table-hover table-dark">
+	        	<thead>
+	          		<tr>
+			            <th>Genre</th>
+			            <th>Movie</th>
+			            <th>Poster</th>
+			            <th>Image</th>
+			            <th>Drink</th>
+			            <th><i class="far fa-trash-alt"></i></th>
+			          </tr>
+	        	</thead>
+	        	<tbody>
+	        	</tbody>
+      		</table>
 
 		</div><!-- table-row -->
 
-	</div><!-- container -->
+	<br>
+		
+		
+<!-- This is the closing tag for the container -->
+	</div>
 
-	<!-- jQuery 3.2.1 minified -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<footer>
+		<div class="text-center">
+  			<p>2018 EvrClr, Inc.</p>
+  		</div>
+	</footer>
 
+	
 	<!-- Our js files -->
 	<script type="text/javascript" src="javascript/movies.js"></script>
 	<script type="text/javascript" src="javascript/drinks.js"></script>
 	<script type="text/javascript" src="javascript/moods.js"></script>
 	<script type="text/javascript" src="javascript/main.js"></script>
-
 
 </body>
 </html>
