@@ -42,28 +42,10 @@
 </head>
 
 <body>
-  
-  <!-- <div class="new-drink">new <i class="fas fa-glass-martini"></i></div>
-  <div class="new-movie">new <i class="fas fa-film"></i></div>
-  <div class="new-pairing">new pairing</div>
-  <div class="save-pairing"> </div>
 
-  <button type="button" class="btn btn-success save-pairing"><i class="fas fa-save"></i> Save</button> -->
-
-
-
-	<!-- <div class="container">
-		
-		<div class="row title-row">
-			<div class="title">
-		    	<h1>
-		    		Net-Mix&nbsp;&nbsp;&nbsp;n'&nbsp;&nbsp;&nbsp;Chill
-		    	</h1>
-	    	</div> -->
-    	<!-- </div> -->
-
+<div class="container-fluid">
 	<!-- Jumbotron -->
-	<div class="jumbotron jumbotron-fluid mx-auto">
+	<div class="jumbotron">
 		<div class="container text-center">			
 			<h1 class="text-center animated fadeInDown">Net-Mix &nbsp;'N&nbsp; Chill</h1>
 			<h3 id="tag-line1">Movie + Drink Pairings to Suit Your Mood</h3>
@@ -72,8 +54,6 @@
 
 	<div class="container">    
     	<div class="row emoji-row">
-    		<!-- <h3 id="tag-line2">What Are You Feeling Tonight?</h3> -->
-
 		    <!-- Rendered Buttons will get Dumped Here  -->
 		    <div id="buttons-view"></div>
 	    </div>
@@ -84,45 +64,42 @@
 		    
 		    <!-- Drinks will Get Dumped Dere -->
 			<div class="col-md-6">
-				<div class="card">
-					<h4 class="card-header text-center">Drink Selection</h4>
-						<div class="card-body mx-auto">
-							<div class="drinks-view mx-auto"><h3 id="Drink-Name"></h3> <img src= "images/Drinks_small.jpg" style="width: 185px;"></div>
-		    				<p class="card-text">Some info about the chosen drink goes here</p>
-		    				 <a href="#" class="btn btn-primary new-drink">Try A Different Drink</a>
+				<div class="card content-card">
+					<h4 class="card-header text-center drink-title">Drink Selection</h4>
+					<div class="card-body mx-auto">
+						<div class="drinks-view mx-auto"><img src= "images/Drinks_small.jpg"></div>
+		    			<p class="card-text"></p>
 		    		</div>
+		    		<div class="card-footer">
+						<div class="new-drink btn btn-primary">new <i class="fas fa-glass-martini"></i></div>
+ 					</div>
 		    	</div>
 		    </div>
 
 		    <!-- Movies will Get Dumped Dere -->
 		    <div class="col-md-6">
-		    	<div class="card">
-		    		<h4 class="card-header text-center">Movie Selection</h4>
+		    	<div class="card content-card">
+		    		<h4 class="card-header text-center movie-title">Movie Selection</h4>
 		    		<div class="card-body mx-auto">
-		    			<div class="movies-view mx-auto"><h3 id="Movies-Name"></h3><img src= "images/Movies_small.jpg" style="width: 185px;"></div>
-		    				<p class="card-text">The movie plot info will go here</p>
-		    				 <a href="#" class="btn btn-primary new-movie">Try A Different Movie</a>
+		    			<div class="movies-view mx-auto"><img src= "images/Movies_small.jpg"></div>
+		    			<p class="card-text"></p>
 		    		</div>
+		    		<div class="card-footer">
+						<div class="new-movie btn btn-primary">new <i class="fas fa-film"></i></div>
+ 					</div>
 		    	</div>
 		    </div>
-
 		</div>
+
+	</div>
 
 		<br>
 
 		<div class="row choices-row">
-			<div class="card col-md-6">
+			<div class="col-md-12">
 				<!-- New Pairing Button -->
-				<!-- <div class="col-md-6"> -->
-					<a href="#" class="btn btn-primary new-pairing">I Want A New Pairing</a>				
-				<!-- </div> -->
-			</div>
-
-			<div class="col-md-6">
-				<!-- Save Current Pairing Button -->
-				<div class="col-md-6">
-					<a href="#" class="btn btn-primary save-pairing">I Want To Save This Pairing</a>
-				</div>
+				<div class="btn btn-success new-pairing">new pairing</div>
+				<div class="btn btn-success save-pairing"><i class="fas fa-save"></i> Save</div>
 			</div>
 		</div>
 
@@ -148,10 +125,6 @@
 		</div><!-- table-row -->
 
 	<br>
-		
-		
-<!-- This is the closing tag for the container -->
-	</div>
 
 	<footer>
 		<div class="text-center">
@@ -159,6 +132,7 @@
   		</div>
 	</footer>
 
+</div>
 	
 	<!-- Our js files -->
 	<script type="text/javascript" src="javascript/movies.js"></script>
