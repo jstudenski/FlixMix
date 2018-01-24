@@ -145,7 +145,7 @@ $(".save-pairing").click(function() {
   // push the object to our savedPairings array
   main.savedPairings.push(save);
   // go through savedPairings and generate table
-  generateTable();
+  // generateTable();
   // get a new drink / movie
   getDrink(main.genreChoice);
   getMovie(main.genreID);
@@ -154,9 +154,22 @@ $(".save-pairing").click(function() {
     });
 
     newSavedPair.set({
-      savedPairings: main.savedPairings,
+      savedGenre: main.genreChoice,
+      savedMovie: current.movie.title,
+      savedPoster: current.movie.poster_path,
+      savedDrinkImg: current.drink.image_path,
+      savedDrink: current.drink.name,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
+
+    database.ref().on("child_added", function(snapshot) {
+    var savedRow = $("<tr>");
+    savedRow.html("<td>" + snapshot.child("savedGenre").val() + "</td>" + "<td>" + snapshot.child("savedMovie").val() + 
+      "</td>" + "<td>" + '<img class="tableImg" src = "' + snapshot.child("savedPoster").val() + '">' + "</td>" + "<td>" +
+      '<img class="tableImg" src = "images/drinks/drinks_' + snapshot.child("savedDrinkImg").val() + '.png">' + 
+      "</td>" + "<td>" + snapshot.child("savedDrink").val() + "</td>");
+    $(".table").append(savedRow);    
+  });
   
 });
 

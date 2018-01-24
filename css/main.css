@@ -22,6 +22,7 @@ h1 {
 	font-family: 'Lakki Reddy', cursive;
 	font-size: 7em;
 }
+
 #tag-line1 {
 	font-family: 'Courgette', cursive;
 }
@@ -66,7 +67,10 @@ this targets the default scrollbar (compulsory)
 	background-color: #e6e6ff;
 }
 
-
+.tableImg {
+	width: 50px;
+	height: 75px;
+}
 
 /* 
 Font Family Tags
