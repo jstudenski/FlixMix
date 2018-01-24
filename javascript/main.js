@@ -103,6 +103,11 @@ generateTable();
 
 // when you click an emoji
 $('.emoji-button').on('click', function(){
+  // slide the page down (1 second)
+  $('html,body').animate({
+    scrollTop: $("#buttons-view").offset().top},
+  1000);
+
   // update our main object with attributes from the emoji button
   main.genreID = $(this).attr("genre-id");
   main.genreChoice = $(this).attr("genre-name").toLowerCase();
