@@ -73,6 +73,12 @@ this targets the default scrollbar (compulsory)
 	background-color: #e6e6ff;
 }
 
+.tableImg {
+	width: 50px;
+	height: 75px;
+}
+
+
 /* 
 Font Family Tags
 
