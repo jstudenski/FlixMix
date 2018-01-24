@@ -78,6 +78,18 @@ this targets the default scrollbar (compulsory)
 	height: 75px;
 }
 
+.content-card {
+	height: 30em;
+}
+
+.btn-success {
+	float:right;
+	margin:.5em;
+}
+
+.new-drink  {
+	float:right;
+}
 
 /* 
 Font Family Tags
