@@ -258,6 +258,7 @@ function getDrink(genre) {
   }
 }
 
+
 // takes main.currentPairing.drink and renders it on our page
 function renderDrink(){
   // clear drink on our page now
@@ -277,5 +278,3 @@ function renderDrink(){
   a.html(i);
   a.appendTo('.drinks-view');
 }
-
-

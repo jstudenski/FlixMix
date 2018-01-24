@@ -1,28 +1,47 @@
-body {
-	background: url("../images/geometry.png") repeat;
+body, html {
+	/*height: 100%;*/
+	background: url("../images/drinks_bkgd.jpg");
+	/*background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;*/
 }
 
-.title {
-	margin:auto;
+.jumbotron {
+	text-align: center;
+	background-color: black; 
+	color: white
+	/*background: url("../images/colorful.jpg");*/
 }
+
 
 h1 {
 	text-align: center;
-	color: #000080;
-	padding-bottom: .2em;
-	margin-top: .8em;
+	color: #0015ff;
+	/*padding-bottom: .2em;*/
+	/*margin-top: .8em;*/
 	font-family: 'Lakki Reddy', cursive;
-	font-size: 6em;
+	font-size: 7em;
+}
+#tag-line1 {
+	font-family: 'Courgette', cursive;
+}
+
+
+footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 10px;
 }
 
 #buttons-view {
-	width: 17em;
-    height: 16em;
+	width: 27em;
+    height: 6em;
     margin: auto;
     overflow-y: scroll;
     border-bottom: 2px solid #ccccff;
     border-top: 2px solid #ccccff;
     background-color: rgba(0, 0, 26, .1);
+    background-color: #2d2d30;
 }
 
 /* 
@@ -60,4 +79,10 @@ font-family: 'Lakki Reddy', cursive;
 font-family: 'Modak', cursive;
 font-family: 'Diplomata', cursive;
 font-family: 'Jolly Lodger', cursive;
+
+font-family: 'Courgette', cursive;
+font-family: 'News Cycle', sans-serif;
+font-family: 'Great Vibes', cursive;
+font-family: 'Tangerine', cursive;
+font-family: 'Caveat', cursive;
 */

@@ -132,6 +132,3 @@ function renderMovie(){
   $('.movies-view').append('<br>' + 'Plot: ', currentMovie.overview + '<br>');   
   $('.movies-view').append('Released Date: ', currentMovie.release_date + '<br>'); 
 }
-
-
-
