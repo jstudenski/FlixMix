@@ -124,11 +124,11 @@ function renderMovie(){
   // clear movie on our page now
   $('.movies-view').html('');
   // apend movie to our page
-  $('.movie-title').html('');
-  $('.movie-title').append(currentMovie.title + '<br>');
+  $('.movie-title').text(currentMovie.title);
 
   var image = $("<img>").attr("src", currentMovie.poster_path);
   image.appendTo('.movies-view');
+  image.css("center");
 
   $('.movies-view').append('<br>' + 'Plot: ', currentMovie.overview + '<br>');   
   $('.movies-view').append('Released Date: ', currentMovie.release_date + '<br>'); 
