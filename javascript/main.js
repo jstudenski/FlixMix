@@ -173,7 +173,7 @@ $(".save-pairing").click(function() {
       "</td>" + "<td>" + '<img class="tableImg" src = "' + snapshot.child("savedPoster").val() + '">' + "</td>" + "<td>" +
       '<img class="tableImg" src = "images/drinks/drinks_' + snapshot.child("savedDrinkImg").val() + '.png">' + 
       "</td>" + "<td>" + snapshot.child("savedDrink").val() + "</td>");
-    $(".table").append(savedRow);    
+    $(".table").prepend(savedRow);    
   });
   
 });
