@@ -31,12 +31,10 @@ var main = {
 }
 
 var savedPairings = [];
-   // "savedPairings": []
-
 
 // renders our emoji buttons
 function renderButtons() {
-  console.log(main);
+  //console.log(main);
   // clear buttons area
   $("#buttons-view").empty();
   // Looping through the array of genres (in movies.js)
@@ -51,58 +49,24 @@ function renderButtons() {
   }
 }
 
-// go through savedPairings and generate table
-function generateTable() {
-  // clear table
-  $('tbody').empty();
-  var drink;
-
-  // go through saved movies and create table rows
-  $.each(main.savedPairings, function( index, value ) {
-
-    var moviePoster = $("<img>")
-      .attr("src", main.savedPairings[index].movie.poster_path)
-      .css("width", "100px");
-
-    var drinkImg = $('<img>')
-      .attr("src", 'images/drinks/drinks_' + main.savedPairings[index].drink.image_path + '.png')
-      .css("width", "100px");
-
-    trash = $("<i>").addClass("far fa-trash-alt"); // font awesome icon
-    var remove = $('<button>')
-      .addClass('btn btn-danger')
-      .html(trash)      
-      .attr('object-index', index) // use to find which item to remove from our object
-      .click(removeItem);
-
-
-    var $tr = $('<tr>').append(
-      $('<td>').text(main.savedPairings[index].genre),
-      $('<td>').text(main.savedPairings[index].movie.title),
-      $('<td>').html(moviePoster),
-      $('<td>').html(drinkImg),
-      $('<td>').text(main.savedPairings[index].drink.name),
-      $('<td>').html(remove),
-    ).appendTo('.table');
-
-  });
-}
-
-function removeItem (){
-  // slice the item from our main object using it's index
-  main.savedPairings.splice($(this).attr('object-index'),1);
-  generateTable();
+// remove row and item from firebase
+function deleteRow() {
+  // remove item from firebase
+  database.ref().child($(this).attr('data-key')).remove();
+  // remove table row
+  this.closest("tr").remove();
 }
 
 // on startup create our emoji buttons
 renderButtons();
-generateTable();
 
 
 
 
+$('.choices-row').hide();
 // when you click an emoji
 $('.emoji-button').on('click', function(){
+  $('.choices-row').show();
   // slide the page down (1 second)
   $('html,body').animate({
     scrollTop: $("#buttons-view").offset().top},
@@ -167,28 +131,77 @@ $(".save-pairing").click(function() {
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
 
+    // generate our table
     database.ref().on("child_added", function(snapshot) {
     var savedRow = $("<tr>");
-    savedRow.html("<td>" + snapshot.child("savedGenre").val() + "</td>" + "<td>" + snapshot.child("savedMovie").val() + 
-      "</td>" + "<td>" + '<img class="tableImg" src = "' + snapshot.child("savedPoster").val() + '">' + "</td>" + "<td>" +
-      '<img class="tableImg" src = "images/drinks/drinks_' + snapshot.child("savedDrinkImg").val() + '.png">' + 
-      "</td>" + "<td>" + snapshot.child("savedDrink").val() + "</td>");
-    $(".table").prepend(savedRow);    
+
+    var trash = $("<i>");
+      trash.addClass("far fa-trash-alt trash-style");
+
+    var tableData = $("<td>");
+      tableData.html(trash);
+      tableData.attr("data-key", snapshot.key);
+      tableData.click(deleteRow); // delete function
+
+    savedRow.html(
+      "<td>" + snapshot.child("savedGenre").val() + "</td>" + 
+      "<td>" + snapshot.child("savedMovie").val() + "</td>" + 
+      "<td>" + '<img class="tableImg" src = "' + snapshot.child("savedPoster").val() + '">' + "</td>" + 
+      "<td>" + '<img class="tableImg" src = "images/drinks/drinks_' + snapshot.child("savedDrinkImg").val() + '.png">' + "</td>" + 
+      "<td>" + snapshot.child("savedDrink").val() + "</td>");
+
+      tableData.appendTo(savedRow);
+
+
+      $(".table").prepend(savedRow);
   });
   
 });
 
 
+// generateTable();
+
+// // go through savedPairings and generate table
+// function generateTable() {
+//   // clear table
+//   $('tbody').empty();
+//   var drink;
+
+//   // go through saved movies and create table rows
+//   $.each(main.savedPairings, function( index, value ) {
+
+//     var moviePoster = $("<img>")
+//       .attr("src", main.savedPairings[index].movie.poster_path)
+//       .css("width", "100px");
+
+//     var drinkImg = $('<img>')
+//       .attr("src", 'images/drinks/drinks_' + main.savedPairings[index].drink.image_path + '.png')
+//       .css("width", "100px");
+
+//     trash = $("<i>").addClass("far fa-trash-alt"); // font awesome icon
+//     var remove = $('<button>')
+//       .addClass('btn btn-danger')
+//       .html(trash)      
+//       .attr('object-index', index) // use to find which item to remove from our object
+//       .click(removeItem);
 
 
+//     var $tr = $('<tr>').append(
+//       $('<td>').text(main.savedPairings[index].genre),
+//       $('<td>').text(main.savedPairings[index].movie.title),
+//       $('<td>').html(moviePoster),
+//       $('<td>').html(drinkImg),
+//       $('<td>').text(main.savedPairings[index].drink.name),
+//       $('<td>').html(remove),
+//     ).appendTo('.table');
 
+//   });
+// }
 
+//  remove function before switching to firebase
 
-
-
-
-
-
-
-
-
+// function removeItem (){
+//   // slice the item from our main object using it's index
+//   main.savedPairings.splice($(this).attr('object-index'),1);
+//   generateTable();
+// }

@@ -39,17 +39,8 @@ h1 {
   border-bottom: 2px solid #0078ff;
   border-top: 2px solid #0078ff;
   background-color: rgba(0, 0, 26, .4);
-/*  background-color: #2d2d30;*/
 }
 
-
-/* 
-this targets the default scrollbar (compulsory)
-
-::-webkit-scrollbar {
-      width: 15px;
-}
-*/
 
 .emoji-button {
 	max-width: 4em;
@@ -114,21 +105,6 @@ footer {
   display: static;
 }
 
-/* 
-Font Family Tags
-
-font-family: 'Ranchers', cursive;
-font-family: 'Geostar', cursive;
-font-family: 'Kumar One', cursive;
-font-family: 'Coiny', cursive;
-font-family: 'Lakki Reddy', cursive;
-font-family: 'Modak', cursive;
-font-family: 'Diplomata', cursive;
-font-family: 'Jolly Lodger', cursive;
-
-font-family: 'Courgette', cursive;
-font-family: 'News Cycle', sans-serif;
-font-family: 'Great Vibes', cursive;
-font-family: 'Tangerine', cursive;
-font-family: 'Caveat', cursive;
-*/
+.trash-style:hover {
+  color: red;
+}
