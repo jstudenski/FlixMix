@@ -63,10 +63,10 @@ renderButtons();
 
 
 
-
-
+$('.choices-row').hide();
 // when you click an emoji
 $('.emoji-button').on('click', function(){
+  $('.choices-row').show();
   // slide the page down (1 second)
   $('html,body').animate({
     scrollTop: $("#buttons-view").offset().top},
