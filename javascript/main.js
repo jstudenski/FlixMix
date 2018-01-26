@@ -31,8 +31,6 @@ var main = {
 }
 
 var savedPairings = [];
-   // "savedPairings": []
-
 
 // renders our emoji buttons
 function renderButtons() {
@@ -51,15 +49,12 @@ function renderButtons() {
   }
 }
 
-
 // remove row and item from firebase
 function deleteRow() {
-  
   // remove item from firebase
   database.ref().child($(this).attr('data-key')).remove();
   // remove table row
   this.closest("tr").remove();
-
 }
 
 // on startup create our emoji buttons
@@ -141,7 +136,7 @@ $(".save-pairing").click(function() {
     var savedRow = $("<tr>");
 
     var trash = $("<i>");
-      trash.addClass("far fa-trash-alt");
+      trash.addClass("far fa-trash-alt trash-style");
 
     var tableData = $("<td>");
       tableData.html(trash);

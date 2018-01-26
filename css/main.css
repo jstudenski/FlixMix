@@ -114,6 +114,10 @@ footer {
   display: static;
 }
 
+.trash-style:hover {
+  color: red;
+}
+
 /* 
 Font Family Tags
 
