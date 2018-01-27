@@ -1,15 +1,14 @@
 // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDoXwhJFk8ZKIL8GbP0ZLb09GjohV0KwTM",
-    authDomain: "movie-drink-pairing.firebaseapp.com",
-    databaseURL: "https://movie-drink-pairing.firebaseio.com",
-    projectId: "movie-drink-pairing",
-    storageBucket: "",
-    messagingSenderId: "480029459361"
-  };
+var config = {
+  apiKey: "AIzaSyDoXwhJFk8ZKIL8GbP0ZLb09GjohV0KwTM",
+  authDomain: "movie-drink-pairing.firebaseapp.com",
+  databaseURL: "https://movie-drink-pairing.firebaseio.com",
+  projectId: "movie-drink-pairing",
+  storageBucket: "",
+  messagingSenderId: "480029459361"
+};
 
-  firebase.initializeApp(config);
-
+firebase.initializeApp(config);
 var database = firebase.database();
 
 var main = {
@@ -59,7 +58,6 @@ function deleteRow() {
 
 // on startup create our emoji buttons
 renderButtons();
-
 
 
 

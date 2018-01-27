@@ -1,14 +1,57 @@
-* {
+body {
+  margin: 0px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+header {
+  height: 40px;
+  background-color: salmon;
+  height: 100px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.container {
+  width: 800px;
+  background-color: salmon;
+  margin: auto;
+}
+
+.emoji-row {
+  padding: 13px;
+  width: 100%;
+  margin: auto;
+  height: 75px;
+  background-color: #dedede;
+  box-sizing: border-box;
+}
+
+.emoji-button {
+  width: 50px;
+}
+
+
+
+
+
+/** {
 	box;
 }
 
 body, html {
-	/*height: 100%;*/
 	background: url("../images/drinks_bkgd.jpg");
-	/*background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;*/
 }
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 2em;
+}
+
 
 .jumbotron {
 	text-align: center;
@@ -17,24 +60,12 @@ body, html {
   border-bottom: 2px solid #0078ff;
 }
 
-h1 {
-	text-align: center;
-	color: #007bff;
-	/*padding-bottom: .2em;*/
-	/*margin-top: .8em;*/
-	font-family: 'Lakki Reddy', cursive;
-	font-size: 7em;
-}
 
 #tag-line1 {
 	font-family: 'Courgette', cursive;
 }
 
 #buttons-view {
-  width: 20em;
-  height: 9.5em;
-  margin: auto;
-  overflow-y: scroll;
   border-bottom: 2px solid #0078ff;
   border-top: 2px solid #0078ff;
   background-color: rgba(0, 0, 26, .4);
@@ -42,10 +73,10 @@ h1 {
 
 
 .emoji-button {
-	max-width: 4em;
-	margin:.3em;
-	opacity:1;
-  	border-radius: 8px;
+  max-width: 3em;
+  margin:.3em;
+  opacity:1;
+  border-radius: 8px;
 }
 
 .emoji-button:hover {
@@ -106,4 +137,4 @@ footer {
 
 .trash-style:hover {
   color: red;
-}
+}*/
