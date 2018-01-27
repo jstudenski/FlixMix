@@ -31,9 +31,8 @@ var main = {
 
 var savedPairings = [];
 
-// renders our emoji buttons
+
 function renderButtons() {
-  //console.log(main);
   // clear buttons area
   $("#buttons-view").empty();
   // Looping through the array of genres (in movies.js)
