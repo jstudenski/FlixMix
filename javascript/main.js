@@ -1,11 +1,10 @@
-// Initialize Firebase
 var config = {
-  apiKey: "AIzaSyDoXwhJFk8ZKIL8GbP0ZLb09GjohV0KwTM",
-  authDomain: "movie-drink-pairing.firebaseapp.com",
-  databaseURL: "https://movie-drink-pairing.firebaseio.com",
-  projectId: "movie-drink-pairing",
-  storageBucket: "",
-  messagingSenderId: "480029459361"
+  apiKey: "AIzaSyB4FpIdRoERGgPR0pLH3N0taR5ynKgStDU",
+  authDomain: "random-movie-f0fbc.firebaseapp.com",
+  databaseURL: "https://random-movie-f0fbc.firebaseio.com",
+  projectId: "random-movie-f0fbc",
+  storageBucket: "random-movie-f0fbc.appspot.com",
+  messagingSenderId: "299435642782"
 };
 
 firebase.initializeApp(config);
