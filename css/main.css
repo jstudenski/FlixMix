@@ -1,6 +1,6 @@
 body {
   margin: 0px;
-  background-color: #f2f2f2;
+  background-color: #ff7e7e;
 }
 
 h1, h3, h4 {
@@ -39,20 +39,11 @@ h3 {
 
 .container {
   width: 800px;
-  background-color: salmon;
   margin: auto;
   height: 800px;
 }
 
-.card {
-  background-color: #a2a2a2;
-  width: 50%;
-  float: left;
-  border: 1px solid #666;
-  box-sizing: border-box;
-  border-radius: 8px;
-  overflow: hidden;
-}
+
 
 
 .button {
@@ -62,6 +53,7 @@ h3 {
   box-sizing: border-box;
   border-radius: 3px;
   color: #fff;
+  border: 1px solid #ddddcf;
 }
 
 
@@ -90,6 +82,52 @@ h3 {
   width: 50px;
   height: 75px;
 }
+
+table {
+  border-collapse: collapse;
+  background-color: #fff;
+  margin: 0px auto;
+}
+
+td, th {
+  border: 1px solid #dadada;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.row {
+  background-color: #ffffff;
+  width: 100%;
+  display: inline-block;
+  float: left;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+
+.card {
+  background-color: #a2a2a2;
+  float: left;
+  width: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.trash-style {
+  padding: 5px;
+}
+
+.trash-style:hover {
+  color: #f44336;
+}
+
+
+
+
 
 /** {
 	box;
@@ -189,6 +227,4 @@ footer {
   display: static;
 }
 
-.trash-style:hover {
-  color: red;
-}*/
+*/

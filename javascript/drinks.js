@@ -265,7 +265,7 @@ function renderDrink(){
   $('.drinks-view').html('');
   // drink name
   $('.drink-title').html('');
-  $('.drink-title').append(main.currentPairing.drink.name + '<br>');
+  $('.drink-title').append(main.currentPairing.drink.name);
   // drink image
   var image = $("<img>").attr("src", 'images/drinks/drinks_' +main.currentPairing.drink.image_path + '.png');
   image.css("width", "185px");

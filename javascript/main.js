@@ -129,6 +129,7 @@ $(".save-pairing").click(function() {
 });
 
 
+
 database.ref().on("child_added", function(snapshot) {
   var tr = $("<tr>");
   var i = $("<i>");
