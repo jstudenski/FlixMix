@@ -60,14 +60,14 @@ renderButtons();
 
 
 
-$('.choices-row').hide();
+// $('.choices-row').hide();
 // when you click an emoji
 $('.emoji-button').on('click', function(){
-  $('.choices-row').show();
+  // $('.choices-row').show();
   // slide the page down (1 second)
-  $('html,body').animate({
-    scrollTop: $("#buttons-view").offset().top},
-  1000);
+  // $('html,body').animate({
+  //   scrollTop: $("#buttons-view").offset().top},
+  // 1000);
 
   // update our main object with attributes from the emoji button
   main.genreID = $(this).attr("genre-id");
