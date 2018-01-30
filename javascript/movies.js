@@ -105,6 +105,9 @@ var genres = {
   ]
 }
 
+var moviedbKey = '0531a8a6b116e7a8d8b9559e7b0b1416'
+
+
 function getMovie(genreID) {
   var randomNumber = Math.floor(Math.random() * 20 - 1);
   //console.log("testing random number: ", randomNumber); 
@@ -113,20 +116,25 @@ function getMovie(genreID) {
   //console.log("genreId: " + genreID);
   //console.log(displayMovieInfo);
 
-  var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0531a8a6b116e7a8d8b9559e7b0b1416&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + genreID
+  var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + moviedbKey + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=" + genreID
 
   $.ajax({
     url: queryURL,
     method: "GET"
   }).done(function(response) {
+    currentMovie = main.currentPairing.movie;
+    randomMovie = response.results[randomNumber]
     // update main object with our ranrom movie
-    main.currentPairing.movie.title = response.results[randomNumber].title;
-    main.currentPairing.movie.poster_path = "http://image.tmdb.org/t/p/w185" + response.results[randomNumber].poster_path;
-    main.currentPairing.movie.overview = response.results[randomNumber].overview;
-    main.currentPairing.movie.release_date = response.results[randomNumber].release_date;
+    currentMovie.title = randomMovie.title;
+    currentMovie.poster_path = "http://image.tmdb.org/t/p/w185" + randomMovie.poster_path;
+    currentMovie.overview = randomMovie.overview;
+    currentMovie.release_date = randomMovie.release_date;
+    currentMovie.trailerId = randomMovie.id; 
     // adds movie to the page
+    // console.log(randomMovie);
     renderMovie();
   });
+
 }
 
 
@@ -139,13 +147,38 @@ function renderMovie(){
   // apend movie to our page
   $('.movie-title').text(currentMovie.title);
 
-  var image = $("<img>").attr("src", currentMovie.poster_path);
-  image.appendTo('.movies-view');
-  image.css("center");
+  // var image = $("<img>").attr("src", currentMovie.poster_path);
+  // image.appendTo('.movies-view');
+  // image.css("center");
+
+
+  var queryURL = "http://api.themoviedb.org/3/movie/" + currentMovie.trailerId + "/videos?api_key=" + moviedbKey;
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).done(function(response) {
+
+      currentMovie.trailerId = response.results[0].key; 
+
+      console.log(currentMovie.trailerId);
+
+      var div = $('<div>');
+      div.addClass('youtube');
+      div.append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + currentMovie.trailerId + '" frameborder="0"  allowfullscreen></iframe>'); 
+      //div.appendTo
+      $('#movie-trailer').html(div)
+  });
+
+
+
 
   $('.modal-body').html('');
   $('.modal-body').append(currentMovie.overview); 
+ 
 }
+
+
 
 
 

@@ -3,6 +3,9 @@ body {
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif; }
 
+* {
+  box-sizing: border-box; }
+
 h1, h3, h4 {
   margin: 0px; }
 
@@ -26,11 +29,10 @@ h3 {
   margin: 20px auto 20px auto;
   height: 75px;
   background-color: #ffffff;
-  box-sizing: border-box;
   border: 1px solid #dfe2e5;
   border-radius: 3px; }
 
-.genre-button {
+.genre-button, .button {
   display: inline-block;
   background-color: #ffffff;
   padding: 6px 12px;
@@ -39,14 +41,12 @@ h3 {
   font-weight: 600;
   letter-spacing: 1px;
   border: 1px solid #555555;
-  color: #555555; }
-
-.genre-button {
+  color: #555555;
+  text-transform: uppercase;
   box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555; }
-
-.genre-button:active {
-  transform: translate(2px, 2px);
-  box-shadow: none; }
+  .genre-button:active, .button:active {
+    transform: translate(2px, 2px);
+    box-shadow: none; }
 
 .container {
   width: 800px;
@@ -67,15 +67,6 @@ h3 {
   border-bottom-width: 1px;
   border-bottom-color: #4f4f4f; }
 
-.button {
-  background-color: #00cacb;
-  display: inline-block;
-  padding: 9px;
-  box-sizing: border-box;
-  border-radius: 3px;
-  color: #fff;
-  border: 1px solid #ddddcf; }
-
 .movies-view, .drinks-view {
   width: 185px;
   height: 278px;
@@ -84,9 +75,9 @@ h3 {
 
 .movie-title, .drink-title {
   text-align: center;
-  padding: 16px;
+  padding: 10px;
   border-bottom: 1px solid #666;
-  background-color: #dedede; }
+  background-color: #fff; }
 
 .option-buttons {
   width: 100%;
@@ -114,23 +105,32 @@ td, th {
   display: inline-block;
   float: left;
   border: 1px solid #ddd;
-  box-sizing: border-box;
-  margin-top: 20px;
-  border-radius: 5px; }
+  margin-top: 20px; }
 
 .card {
-  background-color: #a2a2a2;
+  background-color: #eaeaea;
   float: left;
-  width: 50%;
   border: 1px solid black;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 8px; }
+  overflow: hidden; }
+
+.movie {
+  width: 598px; }
+
+.drink {
+  width: 200px; }
 
 .trash-style {
   padding: 5px; }
 
 .trash-style:hover {
   color: #f44336; }
+
+#movie-trailer {
+  width: 560px;
+  height: 315px;
+  margin: 20px auto;
+  background-color: #747474;
+  border: 1px solid #555555;
+  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555; }
 
 /*# sourceMappingURL=main.css.map */
