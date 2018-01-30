@@ -65,10 +65,13 @@ renderButtons();
 
 $('.genre-button').on('click', function(){
     var color = $(this).attr('color');
+
+    $('.genre-button').css('color', '#555555');
     $('.genre-button').css('background-color', '#fff')
-                      .css('color', '#555555');
+
+    $(this).css('color', '#fff');            
     $(this).css('background-color', color)
-           .css('color', '#fff');
+
 });
 
 
