@@ -90,7 +90,6 @@ h3 {
 .container {
   width: 800px;
   margin: auto;
-  height: 800px;
 }
 
 
@@ -201,13 +200,7 @@ td {
   float: left;
   border: 1px solid #ddd;
   margin-top: 20px;
-  // border-radius: 5px;
 
-}
-
-
-.row {
- // background-color: #eaeaea;
   padding: 5px;
   border-radius: 0px;
   border-style: solid;
@@ -225,11 +218,15 @@ td {
 }
 
 .row1 {
+
+}
+
+.row4 {
+  border-top-width: 6px;
+  border-left-width: 2px;
   background-image: url('../images/bg.png');
   background-size: 5px 5px;
 }
-
-
 
 .card {
   background-color: #eaeaea;

@@ -51,8 +51,7 @@ h3 {
 
 .container {
   width: 800px;
-  margin: auto;
-  height: 800px; }
+  margin: auto; }
 
 .mini-container {
   float: left;
@@ -129,9 +128,7 @@ td {
   display: inline-block;
   float: left;
   border: 1px solid #ddd;
-  margin-top: 20px; }
-
-.row {
+  margin-top: 20px;
   padding: 5px;
   border-radius: 0px;
   border-style: solid;
@@ -145,7 +142,9 @@ td {
   border-bottom-color: #4f4f4f;
   background-color: #eaeaea; }
 
-.row1 {
+.row4 {
+  border-top-width: 6px;
+  border-left-width: 2px;
   background-image: url("../images/bg.png");
   background-size: 5px 5px; }
 
