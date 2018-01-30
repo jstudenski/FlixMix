@@ -3,13 +3,14 @@ var genres = {
   {
     "emoji" : "images/moods/action.png",
     "id": 28,
-    "name": "action"
-
+    "name": "action",
+    "color": "#e00000"
   },
   {
     "emoji" : "images/moods/adventure.png",
     "id": 12,
-    "name": "adventure"
+    "name": "adventure",
+    "color": "#3cd242"
   },
 // {
 //   "id": 16,
@@ -18,7 +19,8 @@ var genres = {
   {
     "emoji" : "images/moods/comedy.png",
     "id": 35,
-    "name": "comedy"
+    "name": "comedy",
+    "color": "#ff6666"
   },
   // {
   //   "id": 80,
@@ -27,53 +29,62 @@ var genres = {
   {
     "emoji" : "images/moods/documentary.png",
     "id": 99,
-    "name": "documentary"
+    "name": "documentary",
+    "color": "#7592af"
   },
   {
     "emoji" : "images/moods/drama.png",
     "id": 18,
-    "name": "drama"
+    "name": "drama",
+    "color": "#ff8100"
   },
   {
     "emoji" : "images/moods/family.png",
     "id": 10751,
-    "name": "family"
-
+    "name": "family",
+    "color": "#ffcc13"
   },
   {
     "emoji" : "images/moods/fantasy.png",
     "id": 14,
-    "name": "fantasy"
+    "name": "fantasy",
+    "color": "#3f51b5"
   },
   {
     "emoji" : "images/moods/history.png",
     "id": 36,
-    "name": "history"
+    "name": "history",
+    "color": "#0bbfae"
   },
   {
     "emoji" : "images/moods/horror.png",
     "id": 27,
-    "name": "horror"
+    "name": "horror",
+    "color": "#c10000"
   },
   {
     "emoji" : "images/moods/music.png",
     "id": 10402,
-    "name": "music"
+    "name": "music",
+    "color": "#9c27b0"
   },
   {
     "emoji" : "images/moods/mystery.png",
     "id": 9648,
-    "name": "mystery"
+    "name": "mystery",
+    "color": "#03a9f4"
   },
   {
     "emoji" : "images/moods/romance.png",
     "id": 10749,
-    "name": "romance"
+    "name": "romance",
+    "color": "#ff6da7"
   },
   {
     "emoji" : "images/moods/scifi.png",
     "id": 878,
-    "name": "scifi"
+    "name": "scifi",
+    "color": "#8ae81b"
   },
   // {
   //   "id": 53,
@@ -82,12 +93,14 @@ var genres = {
   {
     "emoji" : "images/moods/war.png",
     "id": 10752,
-    "name": "war"
+    "name": "war",
+    "color": "#71737b"
   },
   {
     "emoji" : "images/moods/western.png",
     "id": 37,
-    "name": "western"
+    "name": "western",
+    "color": "#a46303"
   }
   ]
 }

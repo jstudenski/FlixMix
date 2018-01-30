@@ -30,22 +30,6 @@ var main = {
 
 var savedPairings = [];
 
-
-function renderButtons() {
-  // clear buttons area
-  $("#buttons-view").empty();
-  // Looping through the array of genres (in movies.js)
-  for (var i = 0; i < genres.genres.length; i++) {
-    // create emoji buttons
-    var a = $("<img>");
-    a.addClass("emoji-button");
-    a.attr("genre-id", genres.genres[i].id);
-    a.attr("genre-name", genres.genres[i].name);
-    a.attr("src", genres.genres[i].emoji);
-    $("#buttons-view").append(a);
-  }
-}
-
 // remove row and item from firebase
 function deleteRow() {
   // remove item from firebase
@@ -54,19 +38,56 @@ function deleteRow() {
   this.closest("tr").remove();
 }
 
+function renderButtons() {
+  // clear buttons area
+  $("#buttons-view").empty();
+  // Looping through the array of genres (in movies.js)
+  for (var i = 0; i < genres.genres.length; i++) {
+    // create emoji buttons
+    var btn = $("<div>");
+    btn.addClass("genre-button");
+    btn.attr("genre-id", genres.genres[i].id);
+    btn.attr("genre-name", genres.genres[i].name);
+    // a.attr("src", genres.genres[i].emoji);
+    btn.text(genres.genres[i].name.toUpperCase());
+
+    var color = genres.genres[i].color;
+    btn.attr("color", color);
+    // btn.css('box-shadow', '1px 1px 0px'+color+',2px 2px 0px'+color+',3px 3px 0px'+color);
+    // btn.css('color', color);
+
+    $("#buttons-view").append(btn);
+  }
+}
+
 // on startup create our emoji buttons
 renderButtons();
 
+$('.genre-button').on('click', function(){
+    var color = $(this).attr('color');
+    $('.genre-button').css('background-color', '#fff')
+                      .css('color', '#555555');
+    $(this).css('background-color', color)
+           .css('color', '#fff');
+});
 
 
-// $('.choices-row').hide();
-// when you click an emoji
-$('.emoji-button').on('click', function(){
-  // $('.choices-row').show();
-  // slide the page down (1 second)
-  // $('html,body').animate({
-  //   scrollTop: $("#buttons-view").offset().top},
-  // 1000);
+// $('.genre-button').mouseup(function() {
+//   var color = $(this).attr('color');
+//   $(this).css('background-color', color);
+//   $(this).css('color', '#fff');
+// }).mousedown(function() {
+//  // $(this).css('box-shadow', 'none');
+// });
+
+
+
+$('.genre-button').mousedown(function() {
+  // $(this).css('box-shadow', 'none');
+});
+
+
+$('.genre-button').on('click', function(){
 
   // update our main object with attributes from the emoji button
   main.genreID = $(this).attr("genre-id");
@@ -75,7 +96,6 @@ $('.emoji-button').on('click', function(){
   getMovie(main.genreID);
   // call our function from drinks.js to get a random drink
   getDrink(main.genreChoice);
-
 });
 
 // keep movie but get a new drink

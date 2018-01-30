@@ -1,26 +1,39 @@
+// sass --watch css/main.scss:css/main.css
+
 body {
   margin: 0px;
   background-color: #ffffff;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+}
 
 h1, h3, h4 {
-  margin: 0px; }
+  margin: 0px;
+}
 
 header {
   height: 40px;
   background-color: #3a3a3a;
   height: 75px;
-  text-align: center; }
-  header h1 {
+  text-align: center;
+
+  h1 {
     color: #3ec9cb;
     float: left;
     padding: 20px;
     font-family: arial;
-    text-shadow: 1px 1px #009191, 2px 2px #007272; }
+    text-shadow: 1px 1px #009191, 2px 2px #007272;
+  }
+
+}
+
+
 
 h3 {
-  color: #ffffff; }
+  color: #ffffff;
+}
 
+
+// test
 .emoji-row {
   padding: 13px;
   margin: 20px auto 20px auto;
@@ -28,7 +41,9 @@ h3 {
   background-color: #ffffff;
   box-sizing: border-box;
   border: 1px solid #dfe2e5;
-  border-radius: 3px; }
+  border-radius: 3px;
+}
+
 
 .genre-button {
   display: inline-block;
@@ -39,19 +54,27 @@ h3 {
   font-weight: 600;
   letter-spacing: 1px;
   border: 1px solid #555555;
-  color: #555555; }
+  color: #555555;
+}
 
 .genre-button {
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555; }
+  box-shadow: 1px 1px 0px #555555,
+              2px 2px 0px #555555,
+}
 
 .genre-button:active {
   transform: translate(2px, 2px);
-  box-shadow: none; }
+  box-shadow: none;
+}
+
+
 
 .container {
   width: 800px;
   margin: auto;
-  height: 800px; }
+  height: 800px;
+}
+
 
 #box1 {
   background-color: #eaeaea;
@@ -65,7 +88,9 @@ h3 {
   border-right-width: 1px;
   border-right-color: #4f4f4f;
   border-bottom-width: 1px;
-  border-bottom-color: #4f4f4f; }
+  border-bottom-color: #4f4f4f;
+}
+
 
 .button {
   background-color: #00cacb;
@@ -74,39 +99,47 @@ h3 {
   box-sizing: border-box;
   border-radius: 3px;
   color: #fff;
-  border: 1px solid #ddddcf; }
+  border: 1px solid #ddddcf;
+}
+
 
 .movies-view, .drinks-view {
   width: 185px;
   height: 278px;
   background-color: #424242;
-  margin: auto; }
+  margin: auto;
+}
 
 .movie-title, .drink-title {
   text-align: center;
   padding: 16px;
   border-bottom: 1px solid #666;
-  background-color: #dedede; }
+  background-color: #dedede;
+}
 
 .option-buttons {
   width: 100%;
   background-color: yellow;
   margin: 0px auto;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .tableImg {
   width: 50px;
-  height: 75px; }
+  height: 75px;
+}
 
 table {
   border-collapse: collapse;
   background-color: #fff;
-  margin: 0px auto; }
+  margin: 0px auto;
+}
 
 td, th {
   border: 1px solid #dadada;
   padding: 0.5rem;
-  text-align: left; }
+  text-align: left;
+}
 
 .row {
   background-color: #ffffff;
@@ -116,7 +149,9 @@ td, th {
   border: 1px solid #ddd;
   box-sizing: border-box;
   margin-top: 20px;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
+
 
 .card {
   background-color: #a2a2a2;
@@ -125,13 +160,20 @@ td, th {
   border: 1px solid black;
   box-sizing: border-box;
   overflow: hidden;
-  border-radius: 8px; }
+  border-radius: 8px;
+}
 
 .trash-style {
-  padding: 5px; }
+  padding: 5px;
+}
 
 .trash-style:hover {
-  color: #f44336; }
+  color: #f44336;
+}
+
+
+
+
 
 /** {
 	box;
@@ -232,5 +274,3 @@ footer {
 }
 
 */
-
-/*# sourceMappingURL=main.css.map */
