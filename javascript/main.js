@@ -152,7 +152,9 @@ database.ref().on("child_added", function(snapshot) {
   td = $("<td>");
   td.text(snapshot.child("savedGenre").val());
   //td.css('border-left', '2px solid' + snapshot.child("savedColor").val());
-  td.css('box-shadow', 'inset 3px 0px 0px 0px' + snapshot.child("savedColor").val())
+  td.css('box-shadow', 'inset 4px 0px 0px 0px' + snapshot.child("savedColor").val());
+  td.css('border-left', 'none');
+  td.css('text-align', 'center'); 
      // box-shadow:
 
 

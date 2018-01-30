@@ -20,13 +20,14 @@ header {
   background-color: #3a3a3a;
   height: 75px;
   text-align: center;
+  border-bottom: 2px solid #7d7d7d;
 
   h1 {
-    color: #3ec9cb;
+    color: #f44336;
     float: left;
     padding: 20px;
     font-family: arial;
-    text-shadow: 1px 1px #009191, 2px 2px #007272;
+    text-shadow: 1px 1px darken( #f44336, 30% ), 2px 2px darken( #f44336, 30% );
   }
 
 }
@@ -218,15 +219,16 @@ td {
 
 }
 
-.row1 {
-
+.row3 {
+  background-image: url('../images/bg.png');
+  background-size: 5px 5px;
 }
 
 .row4 {
   border-top-width: 6px;
   border-left-width: 2px;
-  background-image: url('../images/bg.png');
-  background-size: 5px 5px;
+  background-color: #ababab;
+  padding: 50px 0px;
 }
 
 .card {

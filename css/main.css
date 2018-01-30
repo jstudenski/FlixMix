@@ -13,13 +13,14 @@ header {
   height: 40px;
   background-color: #3a3a3a;
   height: 75px;
-  text-align: center; }
+  text-align: center;
+  border-bottom: 2px solid #7d7d7d; }
   header h1 {
-    color: #3ec9cb;
+    color: #f44336;
     float: left;
     padding: 20px;
     font-family: arial;
-    text-shadow: 1px 1px #009191, 2px 2px #007272; }
+    text-shadow: 1px 1px #891008, 2px 2px #891008; }
 
 h3 {
   color: #ffffff; }
@@ -143,11 +144,15 @@ td {
   border-bottom-color: #4f4f4f;
   background-color: #eaeaea; }
 
+.row3 {
+  background-image: url("../images/bg.png");
+  background-size: 5px 5px; }
+
 .row4 {
   border-top-width: 6px;
   border-left-width: 2px;
-  background-image: url("../images/bg.png");
-  background-size: 5px 5px; }
+  background-color: #ababab;
+  padding: 50px 0px; }
 
 .card {
   background-color: #eaeaea;
