@@ -130,6 +130,7 @@ function getMovie(genreID) {
     currentMovie.overview = randomMovie.overview;
     currentMovie.release_date = randomMovie.release_date;
     currentMovie.trailerId = randomMovie.id; 
+    
     // adds movie to the page
     // console.log(randomMovie);
     renderMovie();

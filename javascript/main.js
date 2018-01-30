@@ -75,26 +75,12 @@ $('.genre-button').on('click', function(){
 });
 
 
-// $('.genre-button').mouseup(function() {
-//   var color = $(this).attr('color');
-//   $(this).css('background-color', color);
-//   $(this).css('color', '#fff');
-// }).mousedown(function() {
-//  // $(this).css('box-shadow', 'none');
-// });
-
-
-
-$('.genre-button').mousedown(function() {
-  // $(this).css('box-shadow', 'none');
-});
-
-
 $('.genre-button').on('click', function(){
 
   // update our main object with attributes from the emoji button
   main.genreID = $(this).attr("genre-id");
   main.genreChoice = $(this).attr("genre-name").toLowerCase();
+  main.genreColor = $(this).attr("color");
   // call our function from movies.js to get a random movie
   getMovie(main.genreID);
   // call our function from drinks.js to get a random drink
@@ -124,12 +110,15 @@ $(".save-pairing").click(function() {
   // make empty objects and fill them with the current values
   var save ={"movie": {}, "drink":{}};
   save.genre = main.genreChoice;
+  save.genreColor = main.genreColor;
+
   save.movie.title=current.movie.title;
   save.movie.poster_path=current.movie.poster_path;
   save.movie.overview=current.movie.overview;
   save.movie.release_date=current.movie.release_date;
   save.drink.name=current.drink.name;
   save.drink.image_path=current.drink.image_path; 
+  // save.movie.genre=current.movie.name;
   // push the object to our savedPairings array
   main.savedPairings.push(save);
   // go through savedPairings and generate table
@@ -143,6 +132,7 @@ $(".save-pairing").click(function() {
 
     newSavedPair.set({
       savedGenre: main.genreChoice,
+      savedColor: main.genreColor,
       savedMovie: current.movie.title,
       savedPoster: current.movie.poster_path,
       savedDrinkImg: current.drink.image_path,
@@ -161,6 +151,13 @@ database.ref().on("child_added", function(snapshot) {
 
   td = $("<td>");
   td.text(snapshot.child("savedGenre").val());
+  //td.css('border-left', '2px solid' + snapshot.child("savedColor").val());
+  td.css('box-shadow', 'inset 3px 0px 0px 0px' + snapshot.child("savedColor").val())
+     // box-shadow:
+
+
+  //td.append();
+
   td.appendTo(tr);
 
   td = $("<td>");
@@ -187,6 +184,7 @@ database.ref().on("child_added", function(snapshot) {
 
   var td = $("<td>");
   td.html(i);
+  td.css("text-align", 'center');
   td.attr("data-key", snapshot.key);
   td.click(deleteRow); // delete function
   td.appendTo(tr);
