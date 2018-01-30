@@ -165,7 +165,8 @@ function renderMovie(){
 
       var div = $('<div>');
       div.addClass('youtube');
-      div.append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + currentMovie.trailerId + '" frameborder="0"  allowfullscreen></iframe>'); 
+      // 560 315
+      div.append('<iframe width="500" height="281" src="https://www.youtube.com/embed/' + currentMovie.trailerId + '" frameborder="0"  allowfullscreen></iframe>'); 
       //div.appendTo
       $('#movie-trailer').html(div)
   });
@@ -173,8 +174,8 @@ function renderMovie(){
 
 
 
-  $('.modal-body').html('');
-  $('.modal-body').append(currentMovie.overview); 
+  //$('.modal-body').html('');
+  //$('.modal-body').append(currentMovie.overview); 
  
 }
 
