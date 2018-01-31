@@ -10,22 +10,25 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px; }
 
 header {
-  margin-top: 8px;
+  margin-top: 12px;
   background-color: #3a3a3a;
   height: 80px;
   text-align: center;
-  box-shadow: 1px 1px #555555, 2px 2px #555555; }
+  box-shadow: 1px 1px #555555, 2px 2px #555555;
+  position: relative;
+  left: -2px; }
   header .logo {
     background-color: #ff8e92;
     border: 1px solid #555555;
     box-shadow: 1px 1px #555555, 2px 2px #555555;
-    height: 82px;
+    height: 80px;
     width: 210px;
     float: left;
     padding-top: 8px;
     font-family: 'Roboto', sans-serif;
     position: relative;
-    bottom: 3px; }
+    bottom: 2px;
+    left: -2px; }
     header .logo h1 {
       color: #fff;
       font-family: 'Shrikhand', cursive;
