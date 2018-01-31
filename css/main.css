@@ -6,7 +6,7 @@ body {
 * {
   box-sizing: border-box; }
 
-h1, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0px; }
 
 header {
@@ -15,17 +15,15 @@ header {
   height: 80px;
   text-align: center;
   box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555; }
-  header h1 {
+  header .logo {
+    background-color: #b1b1b1;
+    border: 1px solid #555555;
+    box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555;
     color: #fff;
     float: left;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
     text-shadow: 1px 1px #3c3c3c, 2px 2px #3c3c3c; }
-
-.logo {
-  background-color: #b1b1b1;
-  border: 1px solid #555555;
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555; }
 
 h3 {
   color: #ffffff; }
@@ -89,7 +87,7 @@ h3 {
 .movie-title, .drink-title {
   text-align: center;
   padding: 10px;
-  border: 1px solid #666;
+  border: 1px solid #555555;
   background-color: #fff;
   box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555; }
 

@@ -1,17 +1,22 @@
 // sass --watch css/main.scss:css/main.css
+$shadow: #555555;
+
+@mixin boxshadow {
+  box-shadow: 1px 1px 0px $shadow, 2px 2px 0px $shadow;
+}
+
 
 body {
   margin: 0px;
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
-
 }
 
 * { 
   box-sizing: border-box;
 } 
 
-h1, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0px;
 }
 
@@ -20,27 +25,22 @@ header {
   background-color: #3a3a3a;
   height: 80px;
   text-align: center;
-  // border-bottom: 2px solid #7d7d7d;
-      box-shadow: 1px 1px 0px #555555,
-              2px 2px 0px #555555;
+  @include boxshadow;
 
-  h1 {
+  .logo{
+    background-color: #b1b1b1;
+    border: 1px solid $shadow;
+    @include boxshadow;
     color: #fff;
     float: left;
     padding: 20px;
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-shadow: 1px 1px darken( #888, 30% ), 2px 2px darken( #888, 30% );
   }
 
 }
 
-.logo{
 
-  background-color: #b1b1b1;
-  border: 1px solid #555555;
-    box-shadow: 1px 1px 0px #555555,
-              2px 2px 0px #555555;
-}
 
 h3 {
   color: #ffffff;
@@ -65,11 +65,10 @@ h3 {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 1px;
-  border: 1px solid #555555;
-  color: #555555;
+  border: 1px solid $shadow;
+  color: $shadow;
   text-transform: uppercase;
-  box-shadow: 1px 1px 0px #555555,
-              2px 2px 0px #555555;
+  @include boxshadow;
 
   &:active {
     transform: translate(2px, 2px);
@@ -129,8 +128,8 @@ h3 {
   width: 100%;
   height: 281px;
   background-color: #747474;
-  border: 1px solid #555555;
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555;
+  border: 1px solid $shadow;
+  @include boxshadow;
   margin: 15px auto;
 }
 
@@ -140,8 +139,8 @@ h3 {
   height: 281px;
   margin: 15px auto;
   background-color: #747474;
-  border: 1px solid #555555;
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555;
+  border: 1px solid $shadow;
+  @include boxshadow;
   overflow: hidden;
 }
 
@@ -149,10 +148,9 @@ h3 {
 .movie-title, .drink-title {
   text-align: center;
   padding: 10px;
-  border: 1px solid #666;
+  border: 1px solid $shadow;
   background-color: #fff;
-    box-shadow: 1px 1px 0px #555555,
-              2px 2px 0px #555555;
+  @include boxshadow;
 }
 
 .option-buttons {
@@ -173,12 +171,12 @@ thead {
  // border-bottom: 1px solid red;
 // border-color: pink;
   background-color: #fff;
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555;
+  @include boxshadow;
 }
 
 
 table {
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555, 3px 3px 0px #555555;
+  box-shadow: 1px 1px 0px $shadow, 2px 2px 0px $shadow, 3px 3px 0px $shadow;
   width: 800px;
 }
 
