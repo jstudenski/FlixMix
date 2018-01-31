@@ -131,26 +131,24 @@ function getMovie(genreID) {
     currentMovie.release_date = randomMovie.release_date;
     currentMovie.trailerId = randomMovie.id; 
     
+    console.log(response.results[randomNumber]);
     // adds movie to the page
     // console.log(randomMovie);
     renderMovie();
   });
 
-}
 
+}
 
 // takes main.currentPairing.movie and renders it on our page
 function renderMovie(){
   //locate current movie in our 'main' object
-  currentMovie = main.currentPairing.movie;
+  var currentMovie = main.currentPairing.movie;
   // clear movie on our page now
   $('.movies-view').html('');
   // apend movie to our page
   $('.movie-title').text(currentMovie.title);
 
-  // var image = $("<img>").attr("src", currentMovie.poster_path);
-  // image.appendTo('.movies-view');
-  // image.css("center");
 
 
   var queryURL = "http://api.themoviedb.org/3/movie/" + currentMovie.trailerId + "/videos?api_key=" + moviedbKey;
@@ -180,6 +178,9 @@ function renderMovie(){
  
 }
 
+  // var image = $("<img>").attr("src", currentMovie.poster_path);
+  // image.appendTo('.movies-view');
+  // image.css("center");
 
 
 
