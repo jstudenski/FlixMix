@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
   margin-top: 12px;
-  background-color: #3a3a3a;
+  background-color: #767676;
   height: 80px;
   text-align: center;
   box-shadow: 1px 1px #555555, 2px 2px #555555;
@@ -63,7 +63,7 @@ h3 {
   .genre-button:active, .button:active {
     transform: translate(2px, 2px);
     box-shadow: none;
-    background-color: #f4f4f4; }
+    background-color: #efefef; }
 
 .container {
   width: 800px;
@@ -159,6 +159,9 @@ td {
   border-bottom-color: #4f4f4f;
   background-color: #eaeaea; }
 
+.row2, .row1 {
+  background-image: url("../images/test6.png"); }
+
 .row3 {
   background-image: url("../images/bg.png");
   background-size: 5px 5px; }
@@ -167,6 +170,8 @@ td {
   border-top-width: 6px;
   border-left-width: 2px;
   background-color: #ababab;
+  background-image: url("../images/test10.png");
+  background-size: 10px 10px;
   padding: 50px 0px; }
 
 .card {
