@@ -1,4 +1,4 @@
-![Alt text](images/EvrClr.png?raw=true "Title")
+<!-- ![Alt text](images/EvrClr.png?raw=true "Title") -->
 
 # movie-drink-pairing
 
