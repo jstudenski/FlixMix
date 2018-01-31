@@ -1,8 +1,17 @@
 // sass --watch css/main.scss:css/main.css
 $shadow: #555555;
 
-@mixin boxshadow {
-  box-shadow: 1px 1px 0px $shadow, 2px 2px 0px $shadow;
+
+
+// box-shadow
+@function depth($depth) {
+  $value: ();
+  @for $i from 1 through $depth {
+    $num: $i + px;
+    $theShadow:$num $num $shadow;
+    $value: append($value, $theShadow, comma)
+  }
+  @return $value;
 }
 
 
@@ -18,27 +27,43 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0px;
+
 }
 
 header {
-  height: 40px;
+  margin-top: 8px;
   background-color: #3a3a3a;
   height: 80px;
   text-align: center;
-  @include boxshadow;
+  box-shadow: depth(2);
 
   .logo{
-    background-color: #b1b1b1;
+    background-color: #ff8e92;
     border: 1px solid $shadow;
-    @include boxshadow;
-    color: #fff;
+    box-shadow: depth(2);
+    //height: 100%;
+    height: 82px;
+    width: 210px;
     float: left;
-    padding: 20px;
+    padding-top: 8px;
     font-family: 'Roboto', sans-serif;
-    text-shadow: 1px 1px darken( #888, 30% ), 2px 2px darken( #888, 30% );
+    position: relative;
+    bottom: 3px;
+
+    h1 {
+      color: #fff;
+      font-family: 'Shrikhand', cursive;
+      font-weight: 400;
+      font-size: 43px;
+      transform: rotate(-5deg);
+      text-shadow: 2px 1px #4c0005, 
+                   3px 2px #4c0005,
+                   4px 3px #4c0005;
+    }
   }
 
 }
+
 
 
 
@@ -68,7 +93,7 @@ h3 {
   border: 1px solid $shadow;
   color: $shadow;
   text-transform: uppercase;
-  @include boxshadow;
+  box-shadow: depth(2);
 
   &:active {
     transform: translate(2px, 2px);
@@ -129,7 +154,7 @@ h3 {
   height: 281px;
   background-color: #747474;
   border: 1px solid $shadow;
-  @include boxshadow;
+  box-shadow: depth(2);
   margin: 15px auto;
 }
 
@@ -140,7 +165,7 @@ h3 {
   margin: 15px auto;
   background-color: #747474;
   border: 1px solid $shadow;
-  @include boxshadow;
+  box-shadow: depth(2);
   overflow: hidden;
 }
 
@@ -150,7 +175,7 @@ h3 {
   padding: 10px;
   border: 1px solid $shadow;
   background-color: #fff;
-  @include boxshadow;
+  box-shadow: depth(2);
 }
 
 .option-buttons {
@@ -171,12 +196,12 @@ thead {
  // border-bottom: 1px solid red;
 // border-color: pink;
   background-color: #fff;
-  @include boxshadow;
+  box-shadow: depth(2);
 }
 
 
 table {
-  box-shadow: 1px 1px 0px $shadow, 2px 2px 0px $shadow, 3px 3px 0px $shadow;
+  box-shadow: depth(3);
   width: 800px;
 }
 

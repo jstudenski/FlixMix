@@ -10,20 +10,29 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px; }
 
 header {
-  height: 40px;
+  margin-top: 8px;
   background-color: #3a3a3a;
   height: 80px;
   text-align: center;
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555; }
+  box-shadow: 1px 1px #555555, 2px 2px #555555; }
   header .logo {
-    background-color: #b1b1b1;
+    background-color: #ff8e92;
     border: 1px solid #555555;
-    box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555;
-    color: #fff;
+    box-shadow: 1px 1px #555555, 2px 2px #555555;
+    height: 82px;
+    width: 210px;
     float: left;
-    padding: 20px;
+    padding-top: 8px;
     font-family: 'Roboto', sans-serif;
-    text-shadow: 1px 1px #3c3c3c, 2px 2px #3c3c3c; }
+    position: relative;
+    bottom: 3px; }
+    header .logo h1 {
+      color: #fff;
+      font-family: 'Shrikhand', cursive;
+      font-weight: 400;
+      font-size: 43px;
+      transform: rotate(-5deg);
+      text-shadow: 2px 1px #4c0005,  3px 2px #4c0005, 4px 3px #4c0005; }
 
 h3 {
   color: #ffffff; }
@@ -47,7 +56,7 @@ h3 {
   border: 1px solid #555555;
   color: #555555;
   text-transform: uppercase;
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555; }
+  box-shadow: 1px 1px #555555, 2px 2px #555555; }
   .genre-button:active, .button:active {
     transform: translate(2px, 2px);
     box-shadow: none;
@@ -72,7 +81,7 @@ h3 {
   height: 281px;
   background-color: #747474;
   border: 1px solid #555555;
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555;
+  box-shadow: 1px 1px #555555, 2px 2px #555555;
   margin: 15px auto; }
 
 #movie-trailer {
@@ -81,7 +90,7 @@ h3 {
   margin: 15px auto;
   background-color: #747474;
   border: 1px solid #555555;
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555;
+  box-shadow: 1px 1px #555555, 2px 2px #555555;
   overflow: hidden; }
 
 .movie-title, .drink-title {
@@ -89,7 +98,7 @@ h3 {
   padding: 10px;
   border: 1px solid #555555;
   background-color: #fff;
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555; }
+  box-shadow: 1px 1px #555555, 2px 2px #555555; }
 
 .option-buttons {
   width: 100%;
@@ -104,10 +113,10 @@ h3 {
 thead {
   transform: translate(-2px, -2px);
   background-color: #fff;
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555; }
+  box-shadow: 1px 1px #555555, 2px 2px #555555; }
 
 table {
-  box-shadow: 1px 1px 0px #555555, 2px 2px 0px #555555, 3px 3px 0px #555555;
+  box-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555;
   width: 800px; }
 
 table {
