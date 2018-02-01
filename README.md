@@ -1,6 +1,5 @@
-<!-- ![Alt text](images/EvrClr.png?raw=true "Title") -->
+<img src="images/flixmix.svg" alt="alt text" width="200">
 
-# NetMix
 
 This Application was designed to demonstrate understanding and application of API's, 
 JavaScript Libraries, and CSS frameworks.
