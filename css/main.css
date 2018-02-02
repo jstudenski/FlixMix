@@ -193,6 +193,8 @@ td {
 .trash-btn {
   background-color: #9E9E9E;
   height: 29px;
+  width: 29px;
+  margin: auto;
   border-radius: 14px;
   padding-top: 5px;
   box-shadow: 1px 1px #555555; }

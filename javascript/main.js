@@ -146,13 +146,14 @@ $(".save-pairing").click(function() {
 
 database.ref().on("child_added", function(snapshot) {
   var tr = $("<tr>");
-  var i = $("<i>");
-  i.addClass("far fa-trash-alt trash-style");
-  div =  $("<div>");
-  div.addClass('trash-btn');
-  i.appendTo(div);
 
-  var img = $("<img>");
+  trashBtn = $("<div>")
+    .addClass('trash-btn')
+    .attr("data-key", snapshot.key)
+    .click(deleteRow); // delete function
+    $("<i>").addClass("far fa-trash-alt trash-style").appendTo(trashBtn);
+
+
 
   td = $("<td>");
   td.text(snapshot.child("savedGenre").val());
@@ -167,21 +168,21 @@ database.ref().on("child_added", function(snapshot) {
   td.appendTo(tr);
 
   td = $("<td>");
-  td.text(snapshot.child("savedMovie").val());
+    td.text(snapshot.child("savedMovie").val());
+    td.appendTo(tr);
+
+  td = $("<td>");
+    var posterImg = $("<img>");
+    posterImg.attr('src',snapshot.child("savedPoster").val());
+    posterImg.addClass('tableImg');
+    posterImg.appendTo(td);
   td.appendTo(tr);
 
   td = $("<td>");
-    img = $("<img>");
-    img.attr('src',snapshot.child("savedPoster").val());
-    img.addClass('tableImg');
-    img.appendTo(td);
-  td.appendTo(tr);
-
-  td = $("<td>");
-    img = $("<img>");
-    img.attr('src', 'images/drinks/drinks_' + snapshot.child("savedDrinkImg").val() + '.png');
-    img.addClass('tableImg');
-    img.appendTo(td);
+    var drinkImg = $("<img>");
+    drinkImg.attr('src', 'images/drinks/drinks_' + snapshot.child("savedDrinkImg").val() + '.png');
+    drinkImg.addClass('tableImg');
+    drinkImg.appendTo(td);
   td.appendTo(tr);
 
   td = $("<td>");
@@ -189,10 +190,8 @@ database.ref().on("child_added", function(snapshot) {
   td.appendTo(tr);
 
   var td = $("<td>");
-  td.html(div);
+  td.html(trashBtn);
   td.css("text-align", 'center');
-  td.attr("data-key", snapshot.key);
-  td.click(deleteRow); // delete function
   td.appendTo(tr);
 
   $(".table").prepend(tr);
