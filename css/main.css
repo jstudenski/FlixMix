@@ -49,23 +49,6 @@ h3 {
   border: 1px solid #dfe2e5;
   border-radius: 3px; }
 
-.genre-button, .button {
-  display: inline-block;
-  background-color: #ffffff;
-  padding: 6px 12px;
-  margin: 4px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border: 1px solid #555555;
-  color: #555555;
-  text-transform: uppercase;
-  box-shadow: 1px 1px #555555, 2px 2px #555555; }
-  .genre-button:active, .button:active {
-    transform: translate(2px, 2px);
-    box-shadow: none;
-    background-color: #efefef; }
-
 .container {
   width: 800px;
   margin: auto; }
@@ -203,29 +186,41 @@ td {
     background-color: #f44336;
     transform: translate(1px, 1px); }
 
-.icon {
-  height: 27px;
-  min-width: 27px;
-  background-color: #767676;
-  border-left: 1px solid #625e5f;
-  float: right;
-  color: #fff;
-  padding: 7px;
-  text-shadow: 1px 1px 0 #333; }
-
-.icon svg {
-  filter: drop-shadow(1px 1px 0px #333); }
-
-.button .text {
-  background-color: #fff;
-  float: left;
-  padding: 6px 10px; }
-
-.button {
-  padding: 0; }
+.genre-button, .button {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 6px 12px;
+  margin: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid #555555;
+  color: #555555;
+  text-transform: uppercase;
+  box-shadow: 1px 1px #555555, 2px 2px #555555; }
+  .genre-button:active, .button:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+    background-color: #efefef; }
 
 .button {
+  padding: 0;
   float: left; }
+  .button .text {
+    background-color: #fff;
+    float: left;
+    padding: 6px 10px; }
+  .button .icon {
+    height: 27px;
+    min-width: 27px;
+    background-color: #767676;
+    border-left: 1px solid #625e5f;
+    float: right;
+    color: #fff;
+    padding: 7px;
+    text-shadow: 1px 1px 0 #333; }
+    .button .icon svg {
+      filter: drop-shadow(1px 1px 0px #333); }
   .button:active .text {
     background-color: #efefef; }
   .button:active .icon {

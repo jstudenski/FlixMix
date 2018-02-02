@@ -92,39 +92,6 @@ h3 {
 }
 
 
-.genre-button, .button {
-  display: inline-block;
-  background-color: #ffffff;
-  padding: 6px 12px;
-  margin: 4px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border: 1px solid $shadow;
-  color: $shadow;
-  text-transform: uppercase;
-  box-shadow: depth(2);
-
-  &:active {
-    transform: translate(2px, 2px);
-    box-shadow: none;
-    background-color: #efefef;
-  }
-
-}
-
-// .genre-button
-
-
-// .button {
-//   background-color: #ffffff;
-//   display: inline-block;
-//   padding: 9px;
-//   border-radius: 3px;
-//   color: #fff;
-//   border: 1px solid #ddddcf;
-// }
-
 
 
 
@@ -324,61 +291,67 @@ td {
 
 
 
-.icon {
-  height: 27px;
-  min-width: 27px;
-  background-color: #767676;
-  border-left: 1px solid #625e5f;
-  float: right;
-  color: #fff;
-  padding: 7px;
-  text-shadow: 1px 1px 0 #333;
+.genre-button, .button {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 6px 12px;
+  margin: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid $shadow;
+  color: $shadow;
+  text-transform: uppercase;
+  box-shadow: depth(2);
+
+  &:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+    background-color: #efefef;
+  }
+
 }
 
-.icon svg {
-  filter: drop-shadow( 1px 1px 0px #333 );
-}
 
-.button .text {
-  background-color: #fff;
-  float: left;
-  padding: 6px 10px;
-}
+
 
 .button {
   padding: 0;
-}
-
-.button {
   float: left;
-
-    &:active {
-.text {
-  background-color: #efefef;
-}
-
-.icon {
-        background-color: #8c8c8c;
-}
-      svg {  
-
-
-
-
-      
-
-
-        filter: drop-shadow(0 0 0);
-        //border: 1px solid green;
-      }
-
-
+  .text {
+    background-color: #fff;
+    float: left;
+    padding: 6px 10px;
+  }
+  .icon {
+    height: 27px;
+    min-width: 27px;
+    background-color: #767676;
+    border-left: 1px solid #625e5f;
+    float: right;
+    color: #fff;
+    padding: 7px;
+    text-shadow: 1px 1px 0 #333;    
+    svg {
+      filter: drop-shadow( 1px 1px 0px #333 );
     }
-
+  }
+  &:active {
+    .text {
+      background-color: #efefef;
+    }
+    .icon {
+      background-color: #8c8c8c;
+    }
+    svg {  
+      filter: drop-shadow(0 0 0);
+    }
+  }
 }
 
 .save-pairing .icon {
   float: left;
   border-left: none;
-  border-right: 1px solid #625e5f;
+  border-right: 1px solid #625e5f;  
 }
+
