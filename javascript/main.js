@@ -58,7 +58,13 @@ function renderButtons() {
 
     $("#buttons-view").append(btn);
   }
+
 }
+
+
+
+
+
 
 // on startup create our emoji buttons
 renderButtons();
@@ -74,6 +80,12 @@ $('.genre-button').on('click', function(){
     //$(this).css('background-color', color)
 
 });
+
+
+
+
+
+
 
 
 $('.genre-button').on('click', function(){
@@ -154,16 +166,22 @@ database.ref().on("child_added", function(snapshot) {
     $("<i>").addClass("far fa-trash-alt trash-style").appendTo(trashBtn);
 
 
-
+  var color = snapshot.child("savedColor").val()
   td = $("<td>");
-  td.text(snapshot.child("savedGenre").val());
-  //td.css('border-left', '2px solid' + snapshot.child("savedColor").val());
-  td.css('box-shadow', 'inset 4px 0px 0px 0px' + snapshot.child("savedColor").val());
+  p = $("<p>")
+    .text(snapshot.child("savedGenre").val().toUpperCase())
+    .css('font-size', '14px')
+    .css('display','inline-block')
+    .css('padding','6px')
+    .css('border','1px solid'+color+'') 
+    .css('background-color', '#fff')
+    .css('z-index','2')     
+    .css('box-shadow','1px 1px 0 '+color+', 2px 2px 0 '+color+', 3px 3px 0 '+color+'')
+    .appendTo(td);
   td.css('border-left', 'none');
   td.css('text-align', 'center'); 
-     // box-shadow:
 
-  //td.append();
+
 
   td.appendTo(tr);
 
@@ -195,4 +213,20 @@ database.ref().on("child_added", function(snapshot) {
   td.appendTo(tr);
 
   $(".table").prepend(tr);
+
+
+  $(".trash-btn")
+    .mouseenter(function() {
+      $(this).closest('tr').css('background-image', 'url("images/bg.png")');
+      $(this).closest('tr').css( "background-size", "5px 5px");
+    })
+    .mouseleave(function() {
+      $(this).closest('tr').css('background-image', 'none');
+      $(this).closest('tr').css( "background-color", "#fff" );
+    });
+
+
+
 });
+
+
