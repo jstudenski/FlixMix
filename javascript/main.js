@@ -148,6 +148,10 @@ database.ref().on("child_added", function(snapshot) {
   var tr = $("<tr>");
   var i = $("<i>");
   i.addClass("far fa-trash-alt trash-style");
+  div =  $("<div>");
+  div.addClass('trash-btn');
+  i.appendTo(div);
+
   var img = $("<img>");
 
   td = $("<td>");
@@ -157,7 +161,6 @@ database.ref().on("child_added", function(snapshot) {
   td.css('border-left', 'none');
   td.css('text-align', 'center'); 
      // box-shadow:
-
 
   //td.append();
 
@@ -186,7 +189,7 @@ database.ref().on("child_added", function(snapshot) {
   td.appendTo(tr);
 
   var td = $("<td>");
-  td.html(i);
+  td.html(div);
   td.css("text-align", 'center');
   td.attr("data-key", snapshot.key);
   td.click(deleteRow); // delete function

@@ -24,18 +24,19 @@ header {
     height: 80px;
     width: 210px;
     float: left;
-    padding-top: 8px;
-    font-family: 'Roboto', sans-serif;
+    padding-top: 12px;
     position: relative;
     bottom: 2px;
     left: -2px; }
     header .logo h1 {
       color: #fff;
-      font-family: 'Shrikhand', cursive;
+      font-family: 'Fredoka One', cursive;
       font-weight: 400;
       font-size: 43px;
-      transform: rotate(-5deg);
-      text-shadow: 2px 1px #4c0005,  3px 2px #4c0005, 4px 3px #4c0005; }
+      text-shadow: 1px 1px #555555, 2px 2px #555555, 3px 3px #555555; }
+      header .logo h1:hover {
+        transform: translate(1px, 1px);
+        text-shadow: 1px 1px #555555, 2px 2px #555555; }
 
 h3 {
   color: #ffffff; }
@@ -186,7 +187,18 @@ td {
 .drink {
   width: 200px; }
 
-.trash-style:hover {
-  color: #f44336; }
+.trash-style {
+  color: #fff; }
+
+.trash-btn {
+  background-color: #9E9E9E;
+  height: 29px;
+  border-radius: 14px;
+  padding-top: 5px;
+  box-shadow: 1px 1px #555555; }
+  .trash-btn:hover {
+    box-shadow: 0 0 0;
+    background-color: #f44336;
+    transform: translate(1px, 1px); }
 
 /*# sourceMappingURL=main.css.map */

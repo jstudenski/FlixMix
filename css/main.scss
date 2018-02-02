@@ -52,20 +52,23 @@ header {
     height: $height;
     width: 210px;
     float: left;
-    padding-top: 8px;
-    font-family: 'Roboto', sans-serif;
+    padding-top: 12px;
+    //font-family: 'Roboto', sans-serif;
     position: relative;
     bottom: $logodepth + px;
     left: -$logodepth + px;
     h1 {
       color: #fff;
-      font-family: 'Shrikhand', cursive;
+      // font-family: 'Shrikhand', cursive;
+      font-family: 'Fredoka One', cursive;
       font-weight: 400;
       font-size: 43px;
-      transform: rotate(-5deg);
-      text-shadow: 2px 1px #4c0005, 
-                   3px 2px #4c0005,
-                   4px 3px #4c0005;
+      // transform: rotate(-5deg);
+      text-shadow: depth(3);
+      &:hover {
+        transform: translate(1px, 1px);
+        text-shadow: depth(2);
+      }     
     }
   }
 
@@ -293,7 +296,25 @@ td {
   width: 200px;
 }
 
-.trash-style:hover {
-  color: #f44336;
+
+.trash-style {
+  color: #fff;
 }
 
+.trash-style:hover {
+  // color: #f44336;
+}
+
+.trash-btn {
+  background-color: #9E9E9E;
+  height: 29px;
+  border-radius: 14px;
+  padding-top: 5px;
+  box-shadow: depth(1);
+  &:hover {
+    box-shadow: 0 0 0;
+    background-color: #f44336;
+    transform: translate(1px, 1px);
+  }
+
+}
