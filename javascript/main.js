@@ -168,22 +168,20 @@ database.ref().on("child_added", function(snapshot) {
 
   var color = snapshot.child("savedColor").val()
   td = $("<td>");
-  p = $("<p>")
-    .text(snapshot.child("savedGenre").val().toUpperCase())
-    .css('font-size', '14px')
-    .css('display','inline-block')
-    .css('padding','6px')
-    .css('border','1px solid'+color+'') 
-    .css('background-color', '#fff')
-    .css('z-index','2')     
-    .css('box-shadow','1px 1px 0 '+color+', 2px 2px 0 '+color+', 3px 3px 0 '+color+'')
-    .appendTo(td);
-  td.css('border-left', 'none');
-  td.css('text-align', 'center'); 
-
-
-
+    td.css('border-left', 'none');
+    td.css('text-align', 'center'); 
+    p = $("<p>")
+      .text(snapshot.child("savedGenre").val().toUpperCase())
+      .css('font-size', '14px')
+      .css('display','inline-block')
+      .css('padding','6px')
+      .css('border','1px solid'+color+'') 
+      .css('background-color', '#fff')
+      .css('z-index','2')     
+      .css('box-shadow','1px 1px 0 '+color+', 2px 2px 0 '+color+', 3px 3px 0 '+color+'')
+      .appendTo(td);
   td.appendTo(tr);
+  
 
   td = $("<td>");
     td.text(snapshot.child("savedMovie").val());

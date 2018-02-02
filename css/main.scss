@@ -321,3 +321,64 @@ td {
 
 }
 
+
+
+
+.icon {
+  height: 27px;
+  min-width: 27px;
+  background-color: #767676;
+  border-left: 1px solid #625e5f;
+  float: right;
+  color: #fff;
+  padding: 7px;
+  text-shadow: 1px 1px 0 #333;
+}
+
+.icon svg {
+  filter: drop-shadow( 1px 1px 0px #333 );
+}
+
+.button .text {
+  background-color: #fff;
+  float: left;
+  padding: 6px 10px;
+}
+
+.button {
+  padding: 0;
+}
+
+.button {
+  float: left;
+
+    &:active {
+.text {
+  background-color: #efefef;
+}
+
+.icon {
+        background-color: #8c8c8c;
+}
+      svg {  
+
+
+
+
+      
+
+
+        filter: drop-shadow(0 0 0);
+        //border: 1px solid green;
+      }
+
+
+    }
+
+}
+
+.save-pairing .icon {
+  float: left;
+  border-left: none;
+  border-right: 1px solid #625e5f;
+}
