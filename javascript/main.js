@@ -178,7 +178,7 @@ database.ref().on("child_added", function(snapshot) {
       .css('border','1px solid'+color+'') 
       .css('background-color', '#fff')
       .css('z-index','2')     
-      .css('box-shadow','1px 1px 0 '+color+', 2px 2px 0 '+color+', 3px 3px 0 '+color+'')
+      .css('box-shadow','1px 1px 0 '+color+', 2px 2px 0 '+color)
       .appendTo(td);
   td.appendTo(tr);
   
