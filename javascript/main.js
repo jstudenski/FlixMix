@@ -12,7 +12,7 @@ var database = firebase.database();
 
 var main = {
   "genreChoice":"",
-  "genreID":"", 
+  "genreID":"",
     "currentPairing": {
       "movie": {
         "title":"",
@@ -35,7 +35,13 @@ function deleteRow() {
   // remove item from firebase
   database.ref().child($(this).attr('data-key')).remove();
   // remove table row
-  this.closest("tr").remove();
+ // this.closest("tr").remove();
+    $(this).closest('tr')
+        .children('td')
+        .animate({ padding: 0 })
+        .wrapInner('<div />')
+        .children()
+        .slideUp(function() { $(this).closest('tr').remove(); });
 }
 
 function renderButtons() {
@@ -76,8 +82,7 @@ $('.genre-button').on('click', function(){
     $('.genre-button').css('background-color', '#fff');
 
     $(this).css('color', '#fff');            
-    $(this).css('background-color', color)
-    //$(this).css('background-color', color)
+    $(this).css('background-color', color);
 
 });
 
