@@ -2,7 +2,6 @@
 $shadow: #555555;
 
 
-
 // box-shadow
 @function depth($depth) {
   $value: ();
@@ -268,12 +267,9 @@ td {
   color: #fff;
 }
 
-.trash-style:hover {
-  // color: #f44336;
-}
 
 .trash-btn {
-  background-color: #9E9E9E;
+  background-color: #767676;
   height: 29px;
   width: 29px;
   margin: auto;
@@ -290,7 +286,6 @@ td {
 
 
 
-
 .genre-button, .button {
   display: inline-block;
   background-color: #ffffff;
@@ -303,7 +298,11 @@ td {
   color: $shadow;
   text-transform: uppercase;
   box-shadow: depth(2);
-
+  
+  &:hover {
+    // box-shadow: depth(1);
+    // transform: translate(1px, 1px);
+  }
   &:active {
     transform: translate(2px, 2px);
     box-shadow: none;
@@ -311,8 +310,6 @@ td {
   }
 
 }
-
-
 
 
 .button {

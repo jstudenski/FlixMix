@@ -141,9 +141,7 @@ $(".save-pairing").click(function() {
   main.savedPairings.push(save);
   // go through savedPairings and generate table
   // generateTable();
-  // get a new drink / movie
-  getDrink(main.genreChoice);
-  getMovie(main.genreID);
+
 
   var newSavedPair = database.ref().push({
   });
@@ -157,6 +155,12 @@ $(".save-pairing").click(function() {
       savedDrink: current.drink.name,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
+
+
+  // // get a new drink / movie
+  // getDrink(main.genreChoice);
+  // getMovie(main.genreID);
+
 });
 
 
