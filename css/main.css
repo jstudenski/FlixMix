@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
   margin-top: 12px;
+  margin-bottom: 2px;
   background-color: #767676;
   height: 80px;
   text-align: center;
@@ -134,14 +135,17 @@ td {
   border-radius: 0px;
   border-style: solid;
   border-top-width: 4px;
-  border-top-color: #767676;
+  border-top-color: #555555;
   border-left-width: 4px;
-  border-left-color: #4f4f4f;
+  border-left-color: #767676;
   border-right-width: 1px;
-  border-right-color: #4f4f4f;
+  border-right-color: #767676;
   border-bottom-width: 1px;
-  border-bottom-color: #4f4f4f;
+  border-bottom-color: #767676;
   background-color: #eaeaea; }
+
+.row1 {
+  margin-top: 0px; }
 
 .row2, .row1 {
   background-image: url("../images/test6.png"); }
