@@ -1,11 +1,12 @@
-<div style="background-color:#ff8e92">
-  <img src="/README/logo.gif" height="100px">
-</div>
+<img src="/README/logo.gif" height="100px">
 
-<img src="images/flixmix.svg" alt="alt text" width="200">
+A small site that uses API's to retrieve a movie trailer and drink based on a users genre selection.
 
 
-This Application was designed to demonstrate understanding and application of API's,
-JavaScript Libraries, and CSS frameworks.
-
-[Live Site](https://jstudenski.github.io/FlixMix/)
+[Test Live Site](https://jstudenski.github.io/FlixMix/)
+#### Links
+* [Sass](https://sass-lang.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [YouTube API](https://developers.google.com/youtube/)
+* [jQuery](https://jquery.com/)
+* [Reset CSS](https://meyerweb.com/eric/tools/css/reset/)

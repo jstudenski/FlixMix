@@ -61,7 +61,6 @@ function renderButtons() {
     btn.attr("color", color);
     // btn.css('box-shadow', '1px 1px 0px'+color+',2px 2px 0px'+color+',3px 3px 0px'+color);
     // btn.css('color', color);
-
     $("#buttons-view").append(btn);
   }
 
@@ -81,7 +80,7 @@ $('.genre-button').on('click', function(){
     $('.genre-button').css('color', '#555555');
     $('.genre-button').css('background-color', '#fff');
 
-    $(this).css('color', '#fff');            
+    $(this).css('color', '#fff');
     $(this).css('background-color', color);
 
 });
@@ -135,7 +134,7 @@ $(".save-pairing").click(function() {
   save.movie.overview=current.movie.overview;
   save.movie.release_date=current.movie.release_date;
   save.drink.name=current.drink.name;
-  save.drink.image_path=current.drink.image_path; 
+  save.drink.image_path=current.drink.image_path;
   // save.movie.genre=current.movie.name;
   // push the object to our savedPairings array
   main.savedPairings.push(save);
@@ -178,19 +177,19 @@ database.ref().on("child_added", function(snapshot) {
   var color = snapshot.child("savedColor").val()
   td = $("<td>");
     td.css('border-left', 'none');
-    td.css('text-align', 'center'); 
+    td.css('text-align', 'center');
     p = $("<p>")
       .text(snapshot.child("savedGenre").val().toUpperCase())
       .css('font-size', '14px')
       .css('display','inline-block')
       .css('padding','6px')
-      .css('border','1px solid'+color+'') 
+      .css('border','1px solid'+color+'')
       .css('background-color', '#fff')
-      .css('z-index','2')     
+      .css('z-index','2')
       .css('box-shadow','1px 1px 0 '+color+', 2px 2px 0 '+color)
       .appendTo(td);
   td.appendTo(tr);
-  
+
 
   td = $("<td>");
     td.text(snapshot.child("savedMovie").val());
@@ -235,5 +234,3 @@ database.ref().on("child_added", function(snapshot) {
 
 
 });
-
-
