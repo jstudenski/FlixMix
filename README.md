@@ -1,4 +1,4 @@
-<div width="100%" height="auto" style="background-color:#ff8e92;">
+<div width="100%" height="10px" style="background-color:#ff8e92">
   <img src="/README/logo.gif" height="100px">
 </div>
 
