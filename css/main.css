@@ -19,6 +19,7 @@ header {
   position: relative;
   left: -2px; }
   header .logo {
+    cursor: pointer;
     background-color: #ff8e92;
     border: 1px solid #555555;
     box-shadow: 1px 1px #555555, 2px 2px #555555;

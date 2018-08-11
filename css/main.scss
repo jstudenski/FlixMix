@@ -1,7 +1,6 @@
 // sass --watch css/main.scss:css/main.css
 $shadow: #555555;
 
-
 // box-shadow
 @function depth($depth) {
   $value: ();
@@ -20,13 +19,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-* { 
+* {
   box-sizing: border-box;
-} 
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0px;
-
 }
 
 
@@ -43,8 +41,9 @@ header {
   box-shadow: depth($headerdepth);
   position: relative;
   left: -$headerdepth + px;
-  
+
   .logo{
+    cursor: pointer;
     background-color: #ff8e92;
     border: 1px solid $shadow;
     box-shadow: depth($logodepth);
@@ -68,7 +67,7 @@ header {
       &:hover {
         transform: translate(1px, 1px);
         text-shadow: depth(2);
-      }     
+      }
     }
   }
 
@@ -223,7 +222,7 @@ td {
   border-right-color: #767676;
   border-bottom-width: 1px;
   border-bottom-color: #767676;
-  
+
   background-color: #eaeaea;
 
 }
@@ -303,7 +302,7 @@ td {
   color: $shadow;
   text-transform: uppercase;
   box-shadow: depth(2);
-  
+
   &:hover {
     // box-shadow: depth(1);
     // transform: translate(1px, 1px);
@@ -333,7 +332,7 @@ td {
     float: right;
     color: #fff;
     padding: 7px;
-    text-shadow: 1px 1px 0 #333;    
+    text-shadow: 1px 1px 0 #333;
     svg {
       filter: drop-shadow( 1px 1px 0px #333 );
     }
@@ -345,7 +344,7 @@ td {
     .icon {
       background-color: #8c8c8c;
     }
-    svg {  
+    svg {
       filter: drop-shadow(0 0 0);
     }
   }
@@ -354,6 +353,5 @@ td {
 .save-pairing .icon {
   float: left;
   border-left: none;
-  border-right: 1px solid #625e5f;  
+  border-right: 1px solid #625e5f;
 }
-

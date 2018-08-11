@@ -3,134 +3,106 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Movie-Drink-Pairing</title>
-
-  <!-- Font Awesome -->
-  <script defer src="javascript/fontawesome-all.js"></script>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-
-  <!-- Firebase Link -->
-  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-
-  <!-- CSS Main Stylesheet -->
-  <link rel="stylesheet" href="css/main.css">
-
+	<title>FlixMix</title>
+	<!-- Font Awesome -->
+	<script defer src="javascript/fontawesome-all.js"></script>
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+	<!-- Firebase Link -->
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+	<!-- CSS Main Stylesheet -->
+	<link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
+	<div class="container">
+		<header>
+			<div class="logo">
+				<h1>FlixMix</h1>
+			</div>
+		</header>
+		<div class="testdiv"></div>
+		<div class="row row1">
+			<!-- <div class="emoji-row"> -->
+			<div id="buttons-view"></div>
+			<!-- </div> -->
+		</div>
 
-  <div class="container">
+		<div class="row row2">
 
-  <header>
-    <div class="logo">
-    <h1>FlixMix</h1>
-    </div>
-  </header>
+			<div class="mini-container">
+				<h4 class="movie-title">Movie Selection</h4>
+				<div id="movie-trailer"></div>
 
-  <div class="testdiv"></div>
+			</div>
 
-
-
-    <div class="row row1">
-      <!-- <div class="emoji-row"> -->
-        <div id="buttons-view"></div>
-        <!-- </div> -->
-      </div>
-
-      <div class="row row2">
-
-        <div class="mini-container">
-          <h4 class="movie-title">Movie Selection</h4>
-          <div id="movie-trailer"></div>
-
-        </div>
-
-        <div class="drink-container">
-          <h4 class="drink-title">Drink Selection</h4>
-          <div class="drinks-view"></div>
-
-        </div>
-
-
-<!--   <div class="card drink">
-    
-    
+			<div class="drink-container">
+				<h4 class="drink-title">Drink Selection</h4>
+				<div class="drinks-view"></div>
+			</div>
+			<!--   <div class="card drink">
     <a class="link-button" target="_blank">Recipe</a>
   </div> -->
-</div>
+		</div>
 
-<div class="row row3">
-	<div class="button save-pairing">
-
-        <div class="icon">
-      <i class="fas fa-save"></i>
-    </div> 
-
-
-  <div class="text">Save Pairing</div>
-  </div>
-
-<!--   <div class="button new-pairing"> New 
+		<div class="row row3">
+			<div class="button save-pairing">
+				<div class="icon">
+					<i class="fas fa-save"></i>
+				</div>
+				<div class="text">Save Pairing</div>
+			</div>
+			<!--   <div class="button new-pairing"> New
     <i class="fas fa-film"></i> &amp;
     <i class="fas fa-glass-martini"></i>
   </div>
  -->
-  <div class="button new-movie">
-    <div class="icon">
-      <i class="fas fa-film"></i>
-    </div> 
-    <div class="text">New</div>
-
-  </div>
-
-  <div class="button new-pairing">
-    <div class="text">New</div>
-    <div class="icon">
-      <i class="fas fa-film"></i> &amp;
-      <i class="fas fa-glass-martini"></i>
-    </div>
-  </div>
-
-  <div class="button new-drink">
-    <div class="text">New</div>
-    <div class="icon"><i class="fas fa-glass-martini"></i></div>
-  </div>
-
-
-</div>
-
-</div> <!-- container -->
-
-<div class="row row4">
-  <table class="table table-hover table-dark">
-    <thead>
-      <tr>
-        <th>Genre</th>
-        <th>Movie</th>
-        <th>Poster</th>
-        <th>Image</th>
-        <th>Drink</th>
-        <th><i class="far fa-trash-alt"></i></th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-</div>
-
-
-<!-- jQuery 3.2.1 -->
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-<!-- popper.js 1.12.9 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-<script src="javascript/movies.js"></script>
-<script src="javascript/drinks.js"></script>
-<script src="javascript/main.js"></script>
-
+			<div class="button new-movie">
+				<div class="icon">
+					<i class="fas fa-film"></i>
+				</div>
+				<div class="text">New</div>
+			</div>
+			<div class="button new-pairing">
+				<div class="text">New</div>
+				<div class="icon">
+					<i class="fas fa-film"></i> &amp;
+					<i class="fas fa-glass-martini"></i>
+				</div>
+			</div>
+			<div class="button new-drink">
+				<div class="text">New</div>
+				<div class="icon"><i class="fas fa-glass-martini"></i></div>
+			</div>
+		</div>
+	</div>
+	<!-- container -->
+	<div class="row row4">
+		<table class="table table-hover table-dark">
+			<thead>
+				<tr>
+					<th>Genre</th>
+					<th>Movie</th>
+					<th>Poster</th>
+					<th>Image</th>
+					<th>Drink</th>
+					<th><i class="far fa-trash-alt"></i></th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	<!-- jQuery 3.2.1 -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<!-- popper.js 1.12.9 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<!-- app javascript -->
+	<script src="javascript/movies.js"></script>
+	<script src="javascript/drinks.js"></script>
+	<script src="javascript/main.js"></script>
 </body>
+
 </html>
